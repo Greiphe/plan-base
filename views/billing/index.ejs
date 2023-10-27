@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="planbase" sizes="100x100" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <link rel="icon" type="image/png" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <title>
+    PlanBase - Gestão
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="/assets/dash/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/dash/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/assets/dash/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <!-- CSS Billing -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/billing.css">
+  <!-- CSS Position Component -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/position.css">
+  <!-- CSS Modal Component -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/modal.css">
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+   <!-- Aside -->
+  <aside
+  class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 z-index-1 bg-gradient-dark"
+  id="sidenav-main">
+  <div class="sidenav-header d-flex justify-content-center p-3">
+    <a class=" m-0 " href="/">
+      <img src="/assets/dash/img/logos/logo3.png" class="img-fluid" alt="main_logo" style="height: 50px; width: 12rem;">
+            </a>
+  </div>
+  <hr class="horizontal light mt-0 mb-2">
+  <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">dashboard</i>
+          </div>
+          <span class="nav-link-text ms-1">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/tables">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">table_view</i>
+          </div>
+          <span class="nav-link-text ms-1">Registros</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white active bg-gradient-primary" href="/billing">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">receipt_long</i>
+          </div>
+          <span class="nav-link-text ms-1">Gestão</span>
+        </a>
+      </li>
+      <li class="nav-item mt-3">
+        <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Financeiro</h6>
+      </li>
+      <li class="nav-item">
+        <!-- /tables/entradas-->
+        <a class="nav-link text-white " href="/tables/entradas">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+           <img src="/assets/dash/img/icons/entrada.svg" alt="Entrada">
+          </div>
+          <span class="nav-link-text ms-1">Entradas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <!-- /tables/saidas -->
+        <a class="nav-link text-white " href="/tables/saidas">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <img src="/assets/dash/img/icons/saída.svg" alt="Saída">
+          </div>
+          <span class="nav-link-text ms-1">Saídas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <!-- /tables/caixa -->
+        <a class="nav-link text-white " href="/tables/caixa">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <img src="/assets/dash/img/icons/caixa.svg" alt="Caixa">
+          </div>
+          <span class="nav-link-text ms-1">Caixa</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <!-- /tables/previsao -->
+        <a class="nav-link text-white " href="/tables/previsao">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <img src="/assets/dash/img/icons/previsão.svg" alt="Previsão">
+          </div>
+          <span class="nav-link-text ms-1">Previsão</span>
+        </a>
+      </li>
+
+      <li class="nav-item mt-3">
+        <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Conta</h6>
+      </li>
+      <li class="nav-item">
+        <!-- /profile/:id -->
+        <a class="nav-link text-white " href="/profile">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">person</i>
+          </div>
+          <span class="nav-link-text ms-1">Profile</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <!-- /faq -->
+        <a class="nav-link text-white " href="/faq">
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <img src="/assets/dash/img/dúvida.svg" alt="Dúvidas">
+          </div>
+          <span class="nav-link-text ms-1">FAQ</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+    <!-- Footer -->
+    <footer class="footer py-2 d-flex flex-column justify-content-center">
+      <div class="copyright text-center text-sm text-muted text-lg-center">
+        Copyright © Planbase
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+      </div>
+      <!-- /devs -->
+      <a class="nav-link text-white d-flex justify-content-start" href="/devs">
+        <img class="ms-4" src="/assets/dash/img/icons/code.svg" alt="Code">
+        <span class="nav-link-text ms-2">Conheça os Devs!</span>
+      </a>
+    </footer>
+    <!-- Footer End -->
+</aside>
+<!-- Aside end -->
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+      data-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Gestão</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Gestão</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 justify-content-end" id="navbar">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item px-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0">
+                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa fa-bell cursor-pointer"></i>
+              </a>
+              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="/assets/dash/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New message</span> from Laur
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          13 minutes ago
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="/assets/dash/img/small-logos/logo-spotify.svg"
+                          class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New album</span> by Travis Scott
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          1 day
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>credit-card</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(453.000000, 454.000000)">
+                                  <path class="color-background"
+                                    d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
+                                    opacity="0.593633743"></path>
+                                  <path class="color-background"
+                                    d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
+                                  </path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          Payment successfully completed
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          2 days
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <a href="/login" class="nav-link text-body font-weight-bold px-0">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none">Login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-xl-6 mb-xl-0 mb-4">
+              <div class="card bg-transparent shadow-xl">
+                <div class="overflow-hidden position-relative border-radius-xl">
+                  <img src="/assets/dash/img/illustrations/bgcartao3.png"
+                    class="position-absolute  start-0 top-0 w-100 z-index-1 h-100 img-fluid" alt="pattern-tree">
+                  <span class="mask bg-gradient-dark opacity-10"></span>
+                  <div class="card-body position-relative z-index-1 p-3">
+                    <p class="text-white text-sm opacity-8 mb-0 mt-4">Conta</p>
+                    <h5 class="text-white mb-5 pb-2">2138 <span class="numero-conta">3551697-3</span></h5>
+                    <div class="d-flex">
+                      <div class="d-flex">
+                        <div class="me-4">
+                          <p class="text-white text-sm opacity-8 mb-0">Instituto</p>
+                          <h6 class="text-white mb-0" id="inserirNomeBancario">Nome do Banco</h6>
+                        </div>
+                        <!-- <div>
+                          <p class="text-white text-sm opacity-8 mb-0">Contrato Início</p>
+                          <h6 class="text-white mb-0">01/02/23</h6>
+                        </div> -->
+                      </div>
+                      <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
+                        <img id="inserirImagemBanco" class="p-0" src="/assets/dash/img/icons-banks/outros-white.svg" alt="logo-bank" width="40px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="row">
+                <div class="col-md-6 col-6">
+                  <div class="card">
+                    <div class="card-header mx-4 p-3 text-center d-flex justify-content-center">
+                      <div
+                        class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg d-flex justify-content-center align-items-center">
+                        <img src="/assets/dash/img/porcentagem.svg" alt="Taxa" style="width: 25px; color: #fff;">
+                      </div>
+                    </div>
+                    <div class="card-body pt-0 p-3 text-center">
+                      <h6 class="text-center mb-0">Taxa</h6>
+                      <span class="text-xs">Referente ao valor</span>
+                      <hr class="horizontal dark my-3">
+                      <h5 class="mb-0">0,00%</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-6">
+                  <div class="card">
+                    <div class="card-header mx-4 p-3 text-center">
+                      <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                        <i class="material-icons opacity-10">account_balance_wallet</i>
+                      </div>
+                    </div>
+                    <div class="card-body pt-0 p-3 text-center">
+                      <h6 class="text-center mb-0">Cobrança</h6>
+                      <span class="text-xs">Tipo da Cobrança</span>
+                      <hr class="horizontal dark my-3">
+                      <h5 class="mb-0">Anual</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 mb-lg-0 mb-4">
+              <div class="card mt-4">
+                <div class="card-header pb-0 p-3">
+                  <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                      <h6 class="mb-0">Bancos Cadastrados</h6>
+                    </div>
+                    <div class="col-6 text-end">
+                      <!-- Botão de Adicionar Card Banco -->
+                      <button type="button" class="btn bg-gradient-dark mb-0" id="cardBanco" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal3" data-bs-whatever="Add cardBanco">
+                        <i class="material-icons text-sm">add</i>&nbsp;&nbsp;Adicionar
+                      </button>
+
+                      <!-- Modal de Adicionar novo banco -->
+                      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <form action="" method="">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel3">Conta Bancária</h1>
+                                <button type="button" class="btn-close btn-danger" id="NovoBancoModalExit" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+                              <div class="row p-3">
+                                <div class="col-6 d-flex flex-column justify-content-center px-4">
+                                  <div class="row">
+                                    <div class="input-group input-group-outline my-3 w-100 p-1">
+                                      <label class="form-label">Agência</label>
+                                      <input type="text" title="Agência" name="Agência" maxlength="4" class="form-control">
+                                    </div>
+                                    <div class="input-group input-group-outline mb-3 w-100 p-1">
+                                      <label class="form-label">Número da conta</label>
+                                      <input type="text" title="Número conta" name="Número conta" maxlength="10" class="form-control">
+
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-6 p-1">
+                                      <div class="input-group input-group-outline mb-3 w-100">
+                                        <label class="form-label">Taxa</label>
+                                        <input type="text" title="Taxa" name="Taxa" maxlength="5" class="form-control">
+                                      </div>
+                                    </div>
+                                    <div class="col-6 p-1">
+                                      <div class="input-group input-group-outline mb-3 w-100">
+                                        <select name="tipoCategoria" id="tipoCategoria" class="p-2 bg-transparent border-radius-md">
+                                          <option value="">Tipo da Categoria</option>
+                                          <option value="Anual">Anual</option>
+                                          <option value="Mensal">Mensal</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-6 pe-4">
+                                  <div class="row p-1">
+                                    <div class="modal-body d-flex flex-column align-items-center">
+                                      <select name="escolhaBanco" id="valorBancario" class="p-2 bg-transparent border-radius-md">
+                                        <option value="">Instituição Bancária</option>
+                                        <option value="amazonia">Banco da Amazônia S.A. </option>
+                                        <option value="brasil">Banco do Brasil S.A.</option>
+                                        <option value="brasili">Banco de Brasília S.A.</option>
+                                        <option value="nordeste">Banco do Nordeste do Brasil S.A.</option>
+                                        <option value="banestes">Banestes S.A.</option>
+                                        <option value="banrisul">Banrisul S.A</option>
+                                        <option value="bradesco">Banco Bradesco S.A.</option>
+                                        <option value="caixa">Caixa Econômica Federal</option>
+                                        <option value="citi">Citi S.A</option>
+                                        <option value="hsbc">Hsbc S/A</option>
+                                        <option value="inter">Inter S.A</option>
+                                        <option value="itau">Itau S.A</option>
+                                        <option value="nubank">Nu Financeira S.A.</option>
+                                        <option value="original">Banco Original S.A.</option>
+                                        <option value="safra">Banco Safra S.A.</option>
+                                        <option value="santander">Banco Santander S.A</option>
+                                        <option value="sicoob">Banco Sicoob S.A.</option>
+                                        <option value="sicredi">Banco Sicredi S.A.</option>
+                                        <option value="outros">Banco Desconhecido</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div class="modal-footer border-0 d-flex justify-content-start ms-6">
+                                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id="adicionarValor">Adicionar</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Fim do modal de adicionar novo banco -->
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-3 overflow-y-auto" style="max-height: 18.5em;">
+                  <div class="row">
+                    <div class="col-md-6 mb-md-0 mb-4">
+                      <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row mt-2"  data-card-id="1">
+                        <img class="w-10 me-3 mb-0 cartao-info" src="/assets/dash/img/icons-banks/santander-black.svg" alt="logo">
+                        <h6 class="mb-0 cartao-info">2138 / 35516975-3</h6>
+                        <button type="button" class="btn p-0 m-0 ms-auto btn-deletar" data-bs-toggle="modal"
+                            data-bs-target="#modalDelCardBanco" data-bs-whatever="Deletar"
+                            data-cartao="2138/3551697-3" data-logo="/assets/dash/img/icons-banks/santander-black.svg">
+                            <img title="Delete" src="/assets/dash/img/icons/delete.svg" alt="Delete">
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row mt-2"  data-card-id="2">
+                        <img class="w-10 me-3 mb-0 cartao-info" src="/assets/dash/img/icons-banks/nubank-black.svg" alt="logo">
+                        <h6 class="mb-0 cartao-info">0005 / 17406176-5</h6>
+                        <button type="button" class="btn p-0 m-0 ms-auto btn-deletar" data-bs-toggle="modal"
+                            data-bs-target="#modalDelCardBanco" data-bs-whatever="Deletar"
+                            data-cartao="0005/1740617-5" data-logo="/assets/dash/img/icons-banks/nubank-black.svg">
+                            <img title="Delete" src="/assets/dash/img/icons/delete.svg" alt="Delete">
+                        </button>
+                    </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                      <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row mt-2"  data-card-id="3">
+                        <img class="w-10 me-3 mb-0 cartao-info" src="/assets/dash/img/icons-banks/itau-black.svg" alt="logo">
+                        <h6 class="mb-0 cartao-info">1784 / 12970319-2</h6>
+                        <button type="button" class="btn p-0 m-0 ms-auto btn-deletar" data-bs-toggle="modal"
+                        data-bs-target="#modalDelCardBanco" data-bs-whatever="Deletar"
+                        data-cartao="1784/1297031-2" data-logo="/assets/dash/img/icons-banks/itau-black.svg">
+                          <img title="Delete" src="/assets/dash/img/icons/delete.svg" alt="Delete">
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row mt-2"  data-card-id="4">
+                        <img class="w-10 me-3 mb-0 card-info" src="/assets/dash/img/icons-banks/brasil-black.svg" alt="logo">
+                        <h6 class="mb-0 card-info">1015 / 04896434-1</h6>
+                        <button type="button" class="btn p-0 m-0 ms-auto btn-deletar" data-bs-toggle="modal"
+                        data-bs-target="#modalDelCardBanco" data-bs-whatever="Deletar"
+                        data-cartao="1015/0489643-1" data-logo="/assets/dash/img/icons-banks/brasil-black.svg">
+                          <img title="Delete" src="/assets/dash/img/icons/delete.svg" alt="Delete">
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Modal de Deletar -->
+                    <div class="modal fade" id="modalDelCardBanco" tabindex="-1" aria-labelledby="modalDelCardBanco1" aria-hidden="true">
+                      <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel3">Deletar Cartão</h1>
+                            <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <!-- Body do modal deletar -->
+                          <div class="modal-body">
+                            <div class="main d-flex flex-column align-items-center">
+                              <div class="top">
+                                <h4 class="d-flex justify-content-center">Tem certeza que deseja apagar?</h4>
+                                <p class="text-sm">Para apagar digite Matrícula e Senha de Administrador</p>
+                              </div>
+                              <!-- Detalhes do Cartão a ser deletado -->
+                              <div class="col-md-6">
+                                <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row p-2">
+                                  <img class="w-10 me-3 mb-0" src="/assets/dash/img/icons-banks/outros-black.svg" alt="logo" id="modalCardLogo">
+                                  <h6 class="mb-0 ms-3" id="modalCardInfo">****/*******-*</h6>
+                                </div>
+                              </div>
+                              <!-- Fim Detalhes do Cartão a ser deletado -->
+                              <form role="form" class="text-start w-50">
+                                <div class="input-group input-group-outline my-3">
+                                  <label class="form-label">Matrícula</label>
+                                  <input type="text" title="Matricula" name="Matricula" class="form-control">
+                                </div>
+                                <div class="input-group input-group-outline mb-3">
+                                  <label class="form-label">Senha</label>
+                                  <input type="password" title="Senha" name="Senha" id="senhaDeletar" class="form-control">
+                                </div>
+                                <div class="form-check form-check-info text-start ps-0">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                                  <label class="form-check-label" for="flexCheckDefault2">
+                                    Mostrar Senha
+                                  </label>
+                                </div>
+                                <div class="text-center">
+                                  <button type="button" class="btn bg-gradient-danger w-100 my-4 mb-2" id="modalDeletarButton">Deletar</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Fim do modal de Deletar -->
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-header pb-0 p-3">
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <h6 class="mb-0">Notas Fiscais</h6>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3 pb-0 overflow-y-auto" style="max-height: 34.5em;">
+
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+
+              <div class="list-group">
+                <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                    <span class="text-xs">Receitas</span>
+                  </div>
+                  <div class="d-flex align-items-center text-sm">
+                    $<span>13,65</span>
+                    <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i
+                        class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</button>
+                  </div>
+                </div>   
+              </div>
+            </div>
+            <!-- Fim da Lista -->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-4">
+          <div class="card">
+            <div class="card-header pb-0 px-3 d-flex align-items-center justify-content-between">
+              <h6 class="mb-0">Fornecedores Empresariais</h6>
+               <!-- Botão de Adicionar Forncedores -->
+               <button type="button" class="btn bg-gradient-dark mb-0" id="cardForn" data-bs-toggle="modal"
+               data-bs-target="#" data-bs-whatever="Add cardForn">
+               <i class="material-icons text-sm">add</i>&nbsp;&nbsp;Adicionar
+             </button>
+            </div>
+            <div class="card-body pt-4 p-3 overflow-y-auto" style="max-height: 25em;">
+              <div class="row">
+                  <!-- Card 1 -->
+                  <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                    <div class="d-flex flex-column">
+                      <h6 class="mb-3 text-sm">Empresa X</h6>
+                      <span class="mb-2 text-xs">Tipo do contrato: <span class="text-dark font-weight-bold ms-sm-2">Anual</span></span>
+                      <span class="mb-2 text-xs">Contato Empresarial: <span
+                          class="text-dark ms-sm-2 font-weight-bold">email.brasilofi@gmail.com.br</span></span>
+                      <span class="text-xs">Valor do Contrato: <span
+                          class="text-dark ms-sm-2 font-weight-bold">1.576,95</span></span>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i
+                          class="material-icons text-sm me-2">delete</i>Delete</a>
+                    </div>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                    <div class="d-flex flex-column">
+                      <h6 class="mb-3 text-sm">Empresa Y</h6>
+                      <span class="mb-2 text-xs">Tipo do contrato: <span class="text-dark font-weight-bold ms-sm-2">Mensal</span></span>
+                      <span class="mb-2 text-xs">Contato Empresarial: <span
+                          class="text-dark ms-sm-2 font-weight-bold">email.brasilofi@gmail.com.br</span></span>
+                      <span class="text-xs">Valor do Contrato: <span
+                          class="text-dark ms-sm-2 font-weight-bold">76,70</span></span>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i
+                          class="material-icons text-sm me-2">delete</i>Delete</a>
+                    </div>
+                  </div>
+
+                  <!-- Card 3 -->
+
+                  <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                    <div class="d-flex flex-column">
+                      <h6 class="mb-3 text-sm">Empresa Z</h6>
+                      <span class="mb-2 text-xs">Tipo do contrato: <span class="text-dark font-weight-bold ms-sm-2">Anual</span></span>
+                      <span class="mb-2 text-xs">Contato Empresarial: <span class="text-dark ms-sm-2 font-weight-bold">contato@empresa-z.com</span></span>
+                      <span class="text-xs">Valor do Contrato: <span class="text-dark ms-sm-2 font-weight-bold">3.789,50</span></span>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;">
+                        <i class="material-icons text-sm me-2">delete</i>Delete
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Card 4 -->
+
+                  <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                    <div class="d-flex flex-column">
+                      <h6 class="mb-3 text-sm">Empresa W</h6>
+                      <span class="mb-2 text-xs">Tipo do contrato: <span class="text-dark font-weight-bold ms-sm-2">Anual</span></span>
+                      <span class="mb-2 text-xs">Contato Empresarial: <span class="text-dark ms-sm-2 font-weight-bold">contato@empresa-w.com</span></span>
+                      <span class="text-xs">Valor do Contrato: <span class="text-dark ms-sm-2 font-weight-bold">2.499,00</span></span>
+                    </div>
+                    <div class="ms-auto text-end">
+                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;">
+                        <i class="material-icons text-sm me-2">delete</i>Delete
+                      </a>
+                    </div>
+                  </div>                  
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="fixed-plugin">
+    <!-- Botão fixo na página para adição de Receitas e Despesas -->
+    <div id="button-container">
+
+      <!-- Botão de Despesas -->
+      <button type="button" class="btn btn-primary button" id="despesas" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" data-bs-whatever="Despesa">
+        <img src="/assets/dash/img/despesa.svg" alt="Despesa" style="width: 35px;">
+      </button>
+
+      <!-- Modal de Despesas -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-despesa">
+            <form action="">
+              <div class="modal-header bg-border-black">
+                <h1 class="modal-title fs-5 red-text" id="exampleModalLabel">Registrar Despesa</h1>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+                <div class="group-top w-75 d-flex justify-content-center">
+                  <div class="grupo-1 d-flex justify-content-center">
+                    <img src="/assets/dash/img/Despesa.jpg" alt="Despesa" class="img-fluid w-100"
+                      style="border-radius: 50%;">
+                  </div>
+                  <div class="group2 d-flex align-items-center">
+                    <div class="group1-1 d-flex flex-column">
+                      <div class="input-despesa">
+                        <input class="inpt-despesa-el" required="" type="text" name="titulo" autocomplete="off"
+                          class="input">
+                        <label class="user-label-receita">Título da Despesa</label>
+                      </div>
+
+                      <div class="input-despesa">
+                        <select class="inpt-despesa-el-select text-md" aria-label="Default select example"
+                          name="categoria">
+                          <option value="">Categoria...</option>
+                          <option value="despesa">Despesa</option>
+                          <option value="pagar">À pagar</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="group1-2 d-flex flex-column">
+                      <div class="input-despesa">
+                        <input class="inpt-despesa-el inpt-despesa-el-data" required="" id="dataInput" type="text"
+                          name="data" autocomplete="off" class="input">
+                        <label class="user-label-receita">Data</label>
+                      </div>
+
+                      <div class="input-despesa">
+                        <input class="inpt-despesa-el-number" required="" type="text" id="valueInputRegistros"
+                          name="valor" autocomplete="off" class="input">
+                        <label class="user-label-receita" id="valueLabelRegistros">Valor</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="group-bottom d-flex mt-4 justify-content-center flex-column align-items-center"
+                  style="height: 50vh;">
+                  <div class="txtarea-center">
+                    <h5 class="red-text">Descrição</h5>
+                    <textarea class="p-3 textarea-despesa" name="descricao" id="text-desc-despesa" cols="45" rows="9"
+                      style="border-radius: 15px;"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer bg-border-black">
+                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                <button type="submit" class="btn btn-dark">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Receitas -->
+      <button type="button" class="btn btn-primary button" id="receitas" data-bs-toggle="modal"
+        data-bs-target="#exampleModal2" data-bs-whatever="Receita">
+        <img src="/assets/dash/img/receita.svg" alt="Receita" style="width: 35px;">
+      </button>
+
+      <!-- Modal de Receitas -->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-receita">
+            <form action="">
+              <div class="modal-header bg-border-black">
+                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Registrar Receita</h1>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+                <div class="group-top w-75 d-flex justify-content-center">
+                  <div class="grupo-1 d-flex justify-content-center">
+                    <img src="/assets/dash/img/Receita.jpg" alt="Receita" class="img-fluid w-100"
+                      style="border-radius: 50%;">
+                  </div>
+                  <div class="group2 d-flex align-items-center">
+                    <div class="group1-1 d-flex flex-column">
+                      <div class="input-receita">
+                        <input class="inpt-receita-el" required="" type="text" name="titulo" autocomplete="off"
+                          class="input">
+                        <label class="user-label-receita">Título da Receita</label>
+                      </div>
+
+                      <div class="input-receita">
+                        <select class="inpt-receita-el-select text-md" aria-label="Default select example"
+                          name="categoria">
+                          <option value="">Categoria...</option>
+                          <option value="receita">Receita</option>
+                          <option value="receber">À receber</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="group1-2 d-flex flex-column">
+                      <div class="input-receita">
+                        <input class="inpt-receita-el inpt-receita-el-data" required="" id="dataInput2" type="text"
+                          name="data" autocomplete="off" class="input">
+                        <label class="user-label-receita">Data</label>
+                      </div>
+
+                      <div class="input-receita">
+                        <input class="inpt-receita-el-number" required="" type="text" id="valueInputRegistros2"
+                          name="valor" autocomplete="off" class="input">
+                        <label class="user-label-receita" id="valueLabelRegistros2">Valor</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="group-bottom d-flex mt-4 justify-content-center flex-column align-items-center"
+                  style="height: 50vh;">
+                  <div class="txtarea-center">
+                    <h5 class="green-text">Descrição</h5>
+                    <textarea class="p-3 textarea-receita" name="descricao" id="text-desc-receita" cols="45" rows="9"
+                      style="border-radius: 15px;"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer bg-border-black">
+                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                <button type="submit" class="btn btn-dark">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão Principal -->
+      <button class="button" id="money">
+        <img class="money" src="/assets/dash/img/coins.svg" alt="Money" style="width: 30px;">
+      </button>
+    </div>
+    <!-- Final do Botão fixo na página para adição de Receitas e Despesas -->
+
+    <!-- Navbar Lateral de Configurações -->
+    <div class="card shadow-lg">
+      <div class="card-header pb-0 pt-3">
+        <div class="float-start">
+          <h5 class="mt-3 mb-0">Material UI Configurator</h5>
+          <p>See our dashboard options.</p>
+        </div>
+        <div class="float-end mt-4">
+          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <!-- End Toggle Button -->
+      </div>
+      <hr class="horizontal dark my-1">
+      <div class="card-body pt-sm-3 pt-0">
+        <!-- Sidebar Backgrounds -->
+        <div>
+          <h6 class="mb-0">Sidebar Colors</h6>
+        </div>
+        <a href="javascript:void(0)" class="switch-trigger background-color">
+          <div class="badge-colors my-2 text-start">
+            <span class="badge filter bg-gradient-primary active" data-color="primary"
+              onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+          </div>
+        </a>
+        <!-- Sidenav Type -->
+        <div class="mt-3">
+          <h6 class="mb-0">Sidenav Type</h6>
+          <p class="text-sm">Choose between 2 different sidenav types.</p>
+        </div>
+        <div class="d-flex">
+          <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark"
+            onclick="sidebarType(this)">Dark</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent"
+            onclick="sidebarType(this)">Transparent</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white"
+            onclick="sidebarType(this)">White</button>
+        </div>
+        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
+        <!-- Navbar Fixed -->
+        <hr class="horizontal dark my-3">
+        <div class="mt-2 d-flex">
+          <h6 class="mb-0">Light / Dark</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar Lateral de Configurações Final -->
+    <!--   Core JS Files   -->
+    <script src="/assets/dash/js/core/popper.min.js"></script>
+    <script src="/assets/dash/js/core/bootstrap.min.js"></script>
+    <script src="/assets/dash/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/pages/billing/profile-form.js"></script>
+    <script src="/assets/dash/js/pages/billing/profile-post.js"></script>
+    <script src="/assets/dash/js/pages/billing/deleteCardBanco.js"></script>
+    <script src="/assets/dash/js/pages/billing/createCardBanco.js"></script>
+    <script src="/assets/dash/js/pages/modal.js"></script>
+  
+    <script>
+      var win = navigator.platform.indexOf('Win') > -1;
+      if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+          damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+      }
+    </script>
+    <script>
+      function mostrarSenha(senhaId, checkId) {
+        const senhaInput = document.getElementById(senhaId);
+        const check = document.getElementById(checkId);
+
+        check.addEventListener('change', function () {
+            if (check.checked) {
+            senhaInput.type = 'text';
+            } else {
+            senhaInput.type = 'password';
+            }
+        });
+    }
+      mostrarSenha('senhaDeletar','flexCheckDefault2')
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="/assets/dash/js/material-dashboard.min.js?v=3.1.0"></script>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
+
