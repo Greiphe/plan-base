@@ -30,6 +30,8 @@
   <!-- Nepcha Analytics (nepcha.com) -->
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+  <!-- Import JQuery for modal delete fornecedor -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 </head>
 
@@ -151,124 +153,61 @@
 </aside>
 <!-- Aside end -->
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-    <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
-      data-scroll="true">
-      <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Gestão</li>
-          </ol>
-          <h6 class="font-weight-bolder mb-0">Gestão</h6>
-        </nav>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 justify-content-end" id="navbar">
-          <ul class="navbar-nav justify-content-end">
-            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
-                <div class="sidenav-toggler-inner">
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+        data-scroll="true">
+        <div class="container-fluid py-1 px-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+              <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+              <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            </ol>
+            <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          </nav>
+          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            </div>
+            <ul class="navbar-nav  justify-content-end">
+              <li class="nav-item d-flex align-items-center d-none">
+                <a href="/adm/login/" class="nav-link text-body font-weight-bold px-0">
+                  <span class="d-sm-inline d-none">Administrador</span>
+                </a>
+              </li>
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                  <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item px-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0">
+                  <lord-icon class="fixed-plugin-button-nav cursor-pointer" src="https://cdn.lordicon.com/dycatgju.json"
+                    trigger="hover" colors="primary:#7b809a" style="width:20px;height:20px">
+                  </lord-icon>
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <div class="dropdown">
+                  <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://github.com/mdo.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-end">
+                    <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+                    <li>
+                      <h6 class="m-0 ms-3 mt-3 text-uppercase text-xs text-white font-weight-bolder opacity-8">Sair</h6>
+                    </li>
+                    <li><a class="dropdown-item" href="/login">Logout</a></li>
+                </ul>
                 </div>
-              </a>
-            </li>
-            <li class="nav-item px-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0">
-                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
-              </a>
-            </li>
-            <li class="nav-item dropdown pe-2 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="fa fa-bell cursor-pointer"></i>
-              </a>
-              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="/assets/dash/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New message</span> from Laur
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          13 minutes ago
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="/assets/dash/img/small-logos/logo-spotify.svg"
-                          class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New album</span> by Travis Scott
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          1 day
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
-                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <title>credit-card</title>
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                              <g transform="translate(1716.000000, 291.000000)">
-                                <g transform="translate(453.000000, 454.000000)">
-                                  <path class="color-background"
-                                    d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
-                                    opacity="0.593633743"></path>
-                                  <path class="color-background"
-                                    d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
-                                  </path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          Payment successfully completed
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          2 days
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item d-flex align-items-center">
-              <a href="/login" class="nav-link text-body font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Login</span>
-              </a>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
+      </nav>
+      <!-- End Navbar -->
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-lg-8">
@@ -351,190 +290,138 @@
                       </button>
 
                       <!-- Modal de Adicionar novo banco -->
-                      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3"
-                        aria-hidden="true">
+                      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                            <form action="" method="">
-                              <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel3">Conta Bancária</h1>
-                                <button type="button" class="btn-close btn-danger" id="NovoBancoModalExit" data-bs-dismiss="modal"
-                                  aria-label="Close"></button>
-                              </div>
-                              <div class="row p-3">
-                                <div class="col-6 d-flex flex-column justify-content-center px-4">
-                                  <div class="row">
-                                    <div class="input-group input-group-outline my-3 w-100 p-1">
-                                      <label class="form-label">Agência</label>
-                                      <input type="text" title="Agência" name="Agência" maxlength="4" class="form-control">
-                                    </div>
-                                    <div class="input-group input-group-outline mb-3 w-100 p-1">
-                                      <label class="form-label">Número da conta</label>
-                                      <input type="text" title="Número conta" name="Número conta" maxlength="10" class="form-control">
-
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-6 p-1">
-                                      <div class="input-group input-group-outline mb-3 w-100">
-                                        <label class="form-label">Taxa</label>
-                                        <input type="text" title="Taxa" name="Taxa" maxlength="5" class="form-control">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel3">Conta Bancária</h1>
+                                    <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="row p-3">
+                                  <div class="col-md-6 d-flex flex-column justify-content-center px-4">
+                                    <div class="row">
+                                      <div class="modal-body p-0">
+                                      <!-- Formulário para adicionar cartão -->
+                                        <form id="novoCartaoForm">
+                                          <div class="input-group input-group-outline my-3 w-100 p-1">
+                                              <label class="form-label">Agência</label>
+                                              <input type="text" title="Agência" name="Agência" maxlength="4" class="form-control" required>
+                                          </div>
+                                          <div class="input-group input-group-outline mb-3 w-100 p-1">
+                                              <label class="form-label">Número da conta</label>
+                                              <input type="text" title="Número Conta" name="NúmeroConta" maxlength="10" class="form-control" required>
+                                          </div>
+                                          <div class="row d-flex align-items-center">
+                                            <div class="col-4">
+                                              <div class="input-group input-group-outline mb-3 w-100 p-1">
+                                                <label class="form-label">Taxa</label>
+                                                <input type="text" name="Taxa" title="Taxa" maxlength="5"  class="form-control w-100" required>
+                                              </div>
+                                            </div>
+                                            <div class="col-8">
+                                              <div class="input-group input-group-outline mb-3 w-100 p-1">
+                                                <select name="TipoCobranca" class="p-2 bg-transparent border-radius-md w-100" required>
+                                                    <option value="">Tipo da Categoria</option>
+                                                    <option value="Anual">Anual</option>
+                                                    <option value="Mensal">Mensal</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
                                       </div>
                                     </div>
-                                    <div class="col-6 p-1">
-                                      <div class="input-group input-group-outline mb-3 w-100">
-                                        <select name="tipoCategoria" id="tipoCategoria" class="p-2 bg-transparent border-radius-md">
-                                          <option value="">Tipo da Categoria</option>
-                                          <option value="Anual">Anual</option>
-                                          <option value="Mensal">Mensal</option>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="row w-100 p-0 m-0">
+                                      <div class="modal-body d-flex flex-column align-items-center w-100 p-1">
+                                        <select name="InstituicaoBancaria" id="valorBancario" class="p-2 bg-transparent border-radius-md mt-3 w-100" required>
+                                            <option value="">Instituição Bancária</option>
+                                            <option value="amazonia">Banco da Amazônia S.A.</option>
+                                            <option value="brasil">Banco do Brasil S.A.</option>
+                                            <option value="brasili">Banco de Brasília S.A.</option>
+                                            <option value="nordeste">Banco do Nordeste do Brasil S.A.</option>
+                                            <option value="banestes">Banestes S.A.</option>
+                                            <option value="banrisul">Banrisul S.A</option>
+                                            <option value="bradesco">Banco Bradesco S.A.</option>
+                                            <option value="caixa">Caixa Econômica Federal</option>
+                                            <option value="citi">Citi S.A</option>
+                                            <option value="hsbc">Hsbc S/A</option>
+                                            <option value="inter">Inter S.A</option>
+                                            <option value="itau">Itau S.A</option>
+                                            <option value="nubank">Nu Financeira S.A.</option>
+                                            <option value="original">Banco Original S.A.</option>
+                                            <option value="safra">Banco Safra S.A.</option>
+                                            <option value="santander">Banco Santander S.A</option>
+                                            <option value="sicoob">Banco Sicoob S.A.</option>
+                                            <option value="sicredi">Banco Sicredi S.A.</option>
+                                            <option value="outros">Banco Desconhecido</option>
                                         </select>
-                                      </div>
+                                    </div>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-6 pe-4">
-                                  <div class="row p-1">
-                                    <div class="modal-body d-flex flex-column align-items-center">
-                                      <select name="escolhaBanco" id="valorBancario" class="p-2 bg-transparent border-radius-md">
-                                        <option value="">Instituição Bancária</option>
-                                        <option value="amazonia">Banco da Amazônia S.A. </option>
-                                        <option value="brasil">Banco do Brasil S.A.</option>
-                                        <option value="brasili">Banco de Brasília S.A.</option>
-                                        <option value="nordeste">Banco do Nordeste do Brasil S.A.</option>
-                                        <option value="banestes">Banestes S.A.</option>
-                                        <option value="banrisul">Banrisul S.A</option>
-                                        <option value="bradesco">Banco Bradesco S.A.</option>
-                                        <option value="caixa">Caixa Econômica Federal</option>
-                                        <option value="citi">Citi S.A</option>
-                                        <option value="hsbc">Hsbc S/A</option>
-                                        <option value="inter">Inter S.A</option>
-                                        <option value="itau">Itau S.A</option>
-                                        <option value="nubank">Nu Financeira S.A.</option>
-                                        <option value="original">Banco Original S.A.</option>
-                                        <option value="safra">Banco Safra S.A.</option>
-                                        <option value="santander">Banco Santander S.A</option>
-                                        <option value="sicoob">Banco Sicoob S.A.</option>
-                                        <option value="sicredi">Banco Sicredi S.A.</option>
-                                        <option value="outros">Banco Desconhecido</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              
-                              <div class="modal-footer border-0 d-flex justify-content-start ms-6">
-                                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
-                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id="adicionarValor">Adicionar</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Fim do modal de adicionar novo banco -->
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body p-3 overflow-y-auto" style="max-height: 18.5em;">
-                  <div class="row">
-                    <div class="col-md-6 mb-md-0 mb-4">
-                      <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row mt-2"  data-card-id="1">
-                        <img class="w-10 me-3 mb-0 cartao-info" src="/assets/dash/img/icons-banks/santander-black.svg" alt="logo">
-                        <h6 class="mb-0 cartao-info">2138 / 35516975-3</h6>
-                        <button type="button" class="btn p-0 m-0 ms-auto btn-deletar" data-bs-toggle="modal"
-                            data-bs-target="#modalDelCardBanco" data-bs-whatever="Deletar"
-                            data-cartao="2138/3551697-3" data-logo="/assets/dash/img/icons-banks/santander-black.svg">
-                            <img title="Delete" src="/assets/dash/img/icons/delete.svg" alt="Delete">
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row mt-2"  data-card-id="2">
-                        <img class="w-10 me-3 mb-0 cartao-info" src="/assets/dash/img/icons-banks/nubank-black.svg" alt="logo">
-                        <h6 class="mb-0 cartao-info">0005 / 17406176-5</h6>
-                        <button type="button" class="btn p-0 m-0 ms-auto btn-deletar" data-bs-toggle="modal"
-                            data-bs-target="#modalDelCardBanco" data-bs-whatever="Deletar"
-                            data-cartao="0005/1740617-5" data-logo="/assets/dash/img/icons-banks/nubank-black.svg">
-                            <img title="Delete" src="/assets/dash/img/icons/delete.svg" alt="Delete">
-                        </button>
-                    </div>
-                    </div>
-
-
-                    <div class="col-md-6">
-                      <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row mt-2"  data-card-id="3">
-                        <img class="w-10 me-3 mb-0 cartao-info" src="/assets/dash/img/icons-banks/itau-black.svg" alt="logo">
-                        <h6 class="mb-0 cartao-info">1784 / 12970319-2</h6>
-                        <button type="button" class="btn p-0 m-0 ms-auto btn-deletar" data-bs-toggle="modal"
-                        data-bs-target="#modalDelCardBanco" data-bs-whatever="Deletar"
-                        data-cartao="1784/1297031-2" data-logo="/assets/dash/img/icons-banks/itau-black.svg">
-                          <img title="Delete" src="/assets/dash/img/icons/delete.svg" alt="Delete">
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row mt-2"  data-card-id="4">
-                        <img class="w-10 me-3 mb-0 card-info" src="/assets/dash/img/icons-banks/brasil-black.svg" alt="logo">
-                        <h6 class="mb-0 card-info">1015 / 04896434-1</h6>
-                        <button type="button" class="btn p-0 m-0 ms-auto btn-deletar" data-bs-toggle="modal"
-                        data-bs-target="#modalDelCardBanco" data-bs-whatever="Deletar"
-                        data-cartao="1015/0489643-1" data-logo="/assets/dash/img/icons-banks/brasil-black.svg">
-                          <img title="Delete" src="/assets/dash/img/icons/delete.svg" alt="Delete">
-                        </button>
-                      </div>
-                    </div>
-
-                    <!-- Modal de Deletar -->
-                    <div class="modal fade" id="modalDelCardBanco" tabindex="-1" aria-labelledby="modalDelCardBanco1" aria-hidden="true">
-                      <div class="modal-dialog modal-md">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel3">Deletar Cartão</h1>
-                            <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <!-- Body do modal deletar -->
-                          <div class="modal-body">
-                            <div class="main d-flex flex-column align-items-center">
-                              <div class="top">
-                                <h4 class="d-flex justify-content-center">Tem certeza que deseja apagar?</h4>
-                                <p class="text-sm">Para apagar digite Matrícula e Senha de Administrador</p>
-                              </div>
-                              <!-- Detalhes do Cartão a ser deletado -->
-                              <div class="col-md-6">
-                                <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row p-2">
-                                  <img class="w-10 me-3 mb-0" src="/assets/dash/img/icons-banks/outros-black.svg" alt="logo" id="modalCardLogo">
-                                  <h6 class="mb-0 ms-3" id="modalCardInfo">****/*******-*</h6>
-                                </div>
-                              </div>
-                              <!-- Fim Detalhes do Cartão a ser deletado -->
-                              <form role="form" class="text-start w-50">
-                                <div class="input-group input-group-outline my-3">
-                                  <label class="form-label">Matrícula</label>
-                                  <input type="text" title="Matricula" name="Matricula" class="form-control">
-                                </div>
-                                <div class="input-group input-group-outline mb-3">
-                                  <label class="form-label">Senha</label>
-                                  <input type="password" title="Senha" name="Senha" id="senhaDeletar" class="form-control">
-                                </div>
-                                <div class="form-check form-check-info text-start ps-0">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                                  <label class="form-check-label" for="flexCheckDefault2">
-                                    Mostrar Senha
-                                  </label>
-                                </div>
-                                <div class="text-center">
-                                  <button type="button" class="btn bg-gradient-danger w-100 my-4 mb-2" id="modalDeletarButton">Deletar</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-light" onclick="limparFormulario()">Limpar</button>
+                                    <button type="button" class="btn btn-dark" id="adicionarCartao" data-bs-dismiss="modal">Adicionar</button>
                                 </div>
                               </form>
                             </div>
-                          </div>
                         </div>
                       </div>
+                      <!-- Fim do modal de adicionar novo banco --> 
                     </div>
-                    <!-- Fim do modal de Deletar -->
-
-
+                  </div>
+                </div>
+                <div class="card-body p-3 overflow-y-auto" style="height: 18em; max-height: 19em;">
+                  <div id="cards-container" class="row">
+                    <!-- Modal de Deletar Card Banco -->
+                    <div class="modal fade" id="modalDelCardBanco" tabindex="-1" aria-labelledby="modalDelCardBanco1" aria-hidden="true">
+                      <div class="modal-dialog modal-md">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel3">Deletar Cartão</h1>
+                                  <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <!-- Body do modal deletar -->
+                              <div class="modal-body">
+                                  <div class="main d-flex flex-column align-items-center">
+                                      <div class="top">
+                                          <h4 class="d-flex justify-content-center">Tem certeza que deseja apagar?</h4>
+                                          <p class="text-sm">Para apagar digite Matrícula e Senha de Administrador</p>
+                                      </div>
+                                      <!-- Detalhes do Cartão a ser deletado -->
+                                      <div class="col-md-6">
+                                          <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row p-2">
+                                              <img class="w-10 me-3 mb-0" src="" alt="logo" id="modalCardLogo">
+                                              <h6 class="mb-0 ms-3" id="modalCardInfo">****/*******-*</h6>
+                                          </div>
+                                      </div>
+                                      <!-- Fim Detalhes do Cartão a ser deletado -->
+                                      <form role="form" class="text-start w-50">
+                                          <div class="input-group input-group-outline my-3">
+                                              <label class="form-label">Matrícula</label>
+                                              <input type="text" title="Matricula" name="Matricula" class="form-control">
+                                          </div>
+                                          <div class="input-group input-group-outline mb-3">
+                                              <label class="form-label">Senha</label>
+                                              <input type="password" title="Senha" name="Senha" id="senhaDeletar" class="form-control">
+                                          </div>
+                                          <div class="form-check form-check-info text-start ps-0">
+                                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                                              <label class="form-check-label" for="flexCheckDefault2">
+                                                  Mostrar Senha
+                                              </label>
+                                          </div>
+                                          <div class="text-center">
+                                              <button type="button" class="btn bg-gradient-danger w-100 my-4 mb-2" id="modalDeletarButton" data-bs-dismiss="modal">Deletar</button>
+                                          </div>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  <!-- Fim do modal de Deletar Card Banco -->
                   </div>
                 </div>
               </div>
@@ -686,13 +573,64 @@
               <h6 class="mb-0">Fornecedores Empresariais</h6>
                <!-- Botão de Adicionar Forncedores -->
                <button type="button" class="btn bg-gradient-dark mb-0" id="cardForn" data-bs-toggle="modal"
-               data-bs-target="#" data-bs-whatever="Add cardForn">
+               data-bs-target="#modalFornecedor" data-bs-whatever="Add cardForn">
                <i class="material-icons text-sm">add</i>&nbsp;&nbsp;Adicionar
              </button>
             </div>
+
+            <!-- Modal de Fornecedor -->
+          <div class="modal fade" id="modalFornecedor" tabindex="-1" aria-labelledby="modalFornecedor1" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel3">Cadastrar Fornecedor</h1>
+                        <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- Body do modal fornecedor -->
+                    <div class="modal-body">
+                        <div class="row d-flex justify-content-center">
+                          <div class="col-md-12">
+                            <div class="input-group input-group-outline my-2 w-100 px-1">
+                              <label class="form-label">Nome Empresarial</label>
+                              <input type="text" name="Nome Fornecedor" class="form-control">
+                            </div>
+                          </div>
+                          <div class="row w-100 p-0">
+                            <div class="col-md-6 ps-3 pe-2">
+                              <select name="tipoContrato Fornecedor" class="p-2 bg-transparent border-radius-md w-100 my-2" required>
+                                <option value="" selected>Tipo Contrato</option>
+                                <option value="Mensal">Mensal</option>
+                                <option value="Anual">Anual</option>
+                            </select>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="input-group input-group-outline my-2 w-100 pe-1">
+                                <label class="form-label">Valor</label>
+                                <input type="text" name="Valor Fornecedor" class="form-control">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="input-group input-group-outline my-2 w-100 px-1">
+                              <label class="form-label">Contato Empresarial</label>
+                              <input type="text" name="Contato Fornecedor" class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer border-0 d-flex justify-content-center gap-3">
+                          <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                          <button type="button" class="btn btn-dark" id="adicionarFornecedor" data-bs-dismiss="modal">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- Fim do modal de Fornecedor -->
+
+
             <div class="card-body pt-4 p-3 overflow-y-auto" style="max-height: 25em;">
-              <div class="row">
-                  <!-- Card 1 -->
+              <div class="row" id="card-fornecedor-container">
+                  <!-- Card 1
                   <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                     <div class="d-flex flex-column">
                       <h6 class="mb-3 text-sm">Empresa X</h6>
@@ -706,10 +644,10 @@
                       <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i
                           class="material-icons text-sm me-2">delete</i>Delete</a>
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- Card 2 -->
-                  <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                  <!-- <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                     <div class="d-flex flex-column">
                       <h6 class="mb-3 text-sm">Empresa Y</h6>
                       <span class="mb-2 text-xs">Tipo do contrato: <span class="text-dark font-weight-bold ms-sm-2">Mensal</span></span>
@@ -722,212 +660,359 @@
                       <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i
                           class="material-icons text-sm me-2">delete</i>Delete</a>
                     </div>
-                  </div>
-
-                  <!-- Card 3 -->
-
-                  <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-3 text-sm">Empresa Z</h6>
-                      <span class="mb-2 text-xs">Tipo do contrato: <span class="text-dark font-weight-bold ms-sm-2">Anual</span></span>
-                      <span class="mb-2 text-xs">Contato Empresarial: <span class="text-dark ms-sm-2 font-weight-bold">contato@empresa-z.com</span></span>
-                      <span class="text-xs">Valor do Contrato: <span class="text-dark ms-sm-2 font-weight-bold">3.789,50</span></span>
-                    </div>
-                    <div class="ms-auto text-end">
-                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;">
-                        <i class="material-icons text-sm me-2">delete</i>Delete
-                      </a>
-                    </div>
-                  </div>
-
-                  <!-- Card 4 -->
-
-                  <div class="col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-3 text-sm">Empresa W</h6>
-                      <span class="mb-2 text-xs">Tipo do contrato: <span class="text-dark font-weight-bold ms-sm-2">Anual</span></span>
-                      <span class="mb-2 text-xs">Contato Empresarial: <span class="text-dark ms-sm-2 font-weight-bold">contato@empresa-w.com</span></span>
-                      <span class="text-xs">Valor do Contrato: <span class="text-dark ms-sm-2 font-weight-bold">2.499,00</span></span>
-                    </div>
-                    <div class="ms-auto text-end">
-                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;">
-                        <i class="material-icons text-sm me-2">delete</i>Delete
-                      </a>
-                    </div>
-                  </div>                  
-
+                  </div>  -->
+                  
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Modal de Deletar Fornecedor -->
+      <div class="modal fade" id="modalDelCardFornecedor" tabindex="-1" aria-labelledby="modalDelCardFornecedor1" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalDelCardFornecedorLabel">Deletar Fornecedor</h1>
+                    <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="main d-flex flex-column align-items-center">
+                        <div class="top">
+                            <h4 class="d-flex justify-content-center">Tem certeza que deseja apagar?</h4>
+                            <p class="text-sm">Para apagar digite Matrícula e Senha de Administrador</p>
+                        </div>
+                        <!-- Detalhes do Cartão de Fornecedor a ser deletado -->
+                        <div class="col-md-6">
+                            <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-column p-2">
+                                <h5 class="mb-0" id="modalFornecedorInfo"></h6>
+                                <h6 class="mb-0" id="modalFornecedorInfoValor"></h6>
+                            </div>
+                        </div>
+                        <!-- Fim Detalhes do Cartão de Fornecedor a ser deletado -->
+                        <form role="form" class="text-start w-50">
+                            <div class="input-group input-group-outline my-3">
+                                <label class="form-label">Matrícula</label>
+                                <input type="text" title="Matrícula" name="Matricula Forn" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline mb-3">
+                                <label class="form-label">Senha</label>
+                                <input type="password" title="Senha" name="Senha Forn" id="senhaDeletarFornecedor" class="form-control">
+                            </div>
+                            <div class="form-check form-check-info text-start ps-0">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                                <label class="form-check-label" for="flexCheckDefault3">
+                                    Mostrar Senha
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn bg-gradient-danger w-100 my-4 mb-2" id="modalDeletarFornecedorButton" data-bs-dismiss="modal">Deletar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Fim do modal de Deletar Fornecedor -->
+
     </div>
   </main>
   <div class="fixed-plugin">
-    <!-- Botão fixo na página para adição de Receitas e Despesas -->
-    <div id="button-container">
+<!-- Botão fixo na página para adição de Entrada e Saída -->
+<div id="button-container">
 
-      <!-- Botão de Despesas -->
-      <button type="button" class="btn btn-primary button" id="despesas" data-bs-toggle="modal"
-        data-bs-target="#exampleModal" data-bs-whatever="Despesa">
-        <img src="/assets/dash/img/despesa.svg" alt="Despesa" style="width: 35px;">
-      </button>
+  <!-- Botão de Saída -->
+  <button type="button" class="btn btn-primary button" id="despesas" data-bs-toggle="modal"
+    data-bs-target="#exampleModal" data-bs-whatever="Despesa">
+    <img src="/assets/dash/img/despesa.svg" alt="Despesa" style="width: 35px;">
+  </button>
 
-      <!-- Modal de Despesas -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content bg-despesa">
-            <form action="">
-              <div class="modal-header bg-border-black">
-                <h1 class="modal-title fs-5 red-text" id="exampleModalLabel">Registrar Despesa</h1>
-                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body d-flex flex-column align-items-center">
-                <div class="group-top w-75 d-flex justify-content-center">
-                  <div class="grupo-1 d-flex justify-content-center">
-                    <img src="/assets/dash/img/Despesa.jpg" alt="Despesa" class="img-fluid w-100"
-                      style="border-radius: 50%;">
-                  </div>
-                  <div class="group2 d-flex align-items-center">
-                    <div class="group1-1 d-flex flex-column">
-                      <div class="input-despesa">
-                        <input class="inpt-despesa-el" required="" type="text" name="titulo" autocomplete="off"
-                          class="input">
-                        <label class="user-label-receita">Título da Despesa</label>
-                      </div>
-
-                      <div class="input-despesa">
-                        <select class="inpt-despesa-el-select text-md" aria-label="Default select example"
-                          name="categoria">
-                          <option value="">Categoria...</option>
-                          <option value="despesa">Despesa</option>
-                          <option value="pagar">À pagar</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="group1-2 d-flex flex-column">
-                      <div class="input-despesa">
-                        <input class="inpt-despesa-el inpt-despesa-el-data" required="" id="dataInput" type="text"
-                          name="data" autocomplete="off" class="input">
-                        <label class="user-label-receita">Data</label>
-                      </div>
-
-                      <div class="input-despesa">
-                        <input class="inpt-despesa-el-number" required="" type="text" id="valueInputRegistros"
-                          name="valor" autocomplete="off" class="input">
-                        <label class="user-label-receita" id="valueLabelRegistros">Valor</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="group-bottom d-flex mt-4 justify-content-center flex-column align-items-center"
-                  style="height: 50vh;">
-                  <div class="txtarea-center">
-                    <h5 class="red-text">Descrição</h5>
-                    <textarea class="p-3 textarea-despesa" name="descricao" id="text-desc-despesa" cols="45" rows="9"
-                      style="border-radius: 15px;"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer bg-border-black">
-                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
-                <button type="submit" class="btn btn-dark">Registrar</button>
-              </div>
-            </form>
+  <!-- Modal de Saída -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-despesa">
+        <form action="">
+          <div class="modal-header border-0">
+            <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Saída</h1>
+            <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-        </div>
-      </div>
-
-      <!-- Botão de Receitas -->
-      <button type="button" class="btn btn-primary button" id="receitas" data-bs-toggle="modal"
-        data-bs-target="#exampleModal2" data-bs-whatever="Receita">
-        <img src="/assets/dash/img/receita.svg" alt="Receita" style="width: 35px;">
-      </button>
-
-      <!-- Modal de Receitas -->
-      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content bg-receita">
-            <form action="">
-              <div class="modal-header bg-border-black">
-                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Registrar Receita</h1>
-                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body d-flex flex-column align-items-center">
-                <div class="group-top w-75 d-flex justify-content-center">
-                  <div class="grupo-1 d-flex justify-content-center">
-                    <img src="/assets/dash/img/Receita.jpg" alt="Receita" class="img-fluid w-100"
-                      style="border-radius: 50%;">
-                  </div>
-                  <div class="group2 d-flex align-items-center">
-                    <div class="group1-1 d-flex flex-column">
-                      <div class="input-receita">
-                        <input class="inpt-receita-el" required="" type="text" name="titulo" autocomplete="off"
-                          class="input">
-                        <label class="user-label-receita">Título da Receita</label>
-                      </div>
-
-                      <div class="input-receita">
-                        <select class="inpt-receita-el-select text-md" aria-label="Default select example"
-                          name="categoria">
-                          <option value="">Categoria...</option>
-                          <option value="receita">Receita</option>
-                          <option value="receber">À receber</option>
-                        </select>
+          <div class="modal-body d-flex flex-column align-items-center">
+            <div class="row w-100 p-0 d-flex justify-content-center">
+              <div class="row w-100 p-2">
+                <div class="col-md-7">
+                  <div class="row w-100 ps-0 m-0">
+                    <div class="col-md-6 p-0 ps-1 pe-1">
+                      <div class="input-group input-group-outline w-100">
+                        <label class="form-label">Título</label>
+                        <input type="text" name="Título Entrada" class="form-control">
                       </div>
                     </div>
-
-                    <div class="group1-2 d-flex flex-column">
-                      <div class="input-receita">
-                        <input class="inpt-receita-el inpt-receita-el-data" required="" id="dataInput2" type="text"
-                          name="data" autocomplete="off" class="input">
-                        <label class="user-label-receita">Data</label>
+                    <div class="col-md-6 ps-1 pe-1">
+                      <select name="Categoria Entrada" class="p-2 bg-transparent border-radius-md w-100" required>
+                        <option value="" selected>Categoria</option>
+                        <option value="Operacional">Operacional</option>
+                        <option value="Não Operacional">Não Operacional</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row w-100 m-0">
+                    <div class="col-md-6 px-1">
+                      <div class="input-group input-group-outline my-3 w-100">
+                        <label class="form-label">Valor</label>
+                        <input type="text" name="Valor Entrada" class="form-control">
                       </div>
-
-                      <div class="input-receita">
-                        <input class="inpt-receita-el-number" required="" type="text" id="valueInputRegistros2"
-                          name="valor" autocomplete="off" class="input">
-                        <label class="user-label-receita" id="valueLabelRegistros2">Valor</label>
+                    </div>
+                    <div class="col-md-6 px-1">
+                      <select name="qtdParcela Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                        <option value="0" selected>Qtd. Parcela</option>
+                        <option value="1">1 Parcela</option>
+                        <option value="2">2 Parcela</option>
+                        <option value="3">3 Parcela</option>
+                        <option value="4">4 Parcela</option>
+                    </select>
+                    </div>
+                  </div>
+                  <div class="px-1">
+                    <select name="Destinatário Entrada" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                      <option value="S/D" selected>Remetente</option>
+                      <option value="amazonia">Banco da Amazônia S.A.</option>
+                      <option value="brasil">Banco do Brasil S.A.</option>
+                      <option value="brasili">Banco de Brasília S.A.</option>
+                      <option value="nordeste">Banco do Nordeste do Brasil S.A.</option>
+                      <option value="banestes">Banestes S.A.</option>
+                      <option value="banrisul">Banrisul S.A</option>
+                      <option value="bradesco">Banco Bradesco S.A.</option>
+                      <option value="caixa">Caixa Econômica Federal</option>
+                      <option value="citi">Citi S.A</option>
+                      <option value="hsbc">Hsbc S/A</option>
+                      <option value="inter">Inter S.A</option>
+                      <option value="itau">Itau S.A</option>
+                      <option value="nubank">Nu Financeira S.A.</option>
+                      <option value="original">Banco Original S.A.</option>
+                      <option value="safra">Banco Safra S.A.</option>
+                      <option value="santander">Banco Santander S.A</option>
+                      <option value="sicoob">Banco Sicoob S.A.</option>
+                      <option value="sicredi">Banco Sicredi S.A.</option>
+                      <option value="outros">Banco Desconhecido</option>
+                      <option value="S/D">Sem Destinatário</option>
+                  </select>
+                  </div>
+                  <div class="px-1">
+                    <select name="Fornecedor Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                      <option value="S/F" selected>Fornecedor</option>
+                      <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                      <option value="S/F">Sem Fornecedor</option>
+                  </select>
+                  </div>
+                  <div class="row w-100 m-0">
+                    <div class="col-md-6 px-1">
+                      <div class="input-group input-group-outline my-0 w-100 px-0">
+                        <div class="input-group">
+                          <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                            <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                          </ul>
+                          <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="Nota Fiscal Entrada" placeholder="Nota Fiscal" required>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 px-1">
+                    <select name="Status Entrada" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                      <option value="" selected>Status</option>
+                      <option value="Pendente">Pendente</option> 
+                      <option value="Efetuado">Efetuado</option>
+                    </select>
+                  </div>
+                  </div>
+                  <div class="row w-100 m-0">
+                    <div class="col-md-6 px-1">
+                      <select name="Pagamento Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                        <option value="" selected>Pagamento</option>
+                        <option value="Boleto">Boleto</option>
+                        <option value="PIX">PIX</option>
+                        <option value="Crédito">Crédito</option>
+                        <option value="Débito">Débito</option>
+                    </select>
+                    </div>
+                    <div class="col-md-6 px-1">
+                      <div class="input-group input-group-outline my-3 w-100">
+                        <input type="date" class="form-control" name="Data Entrada">
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <div class="group-bottom d-flex mt-4 justify-content-center flex-column align-items-center"
-                  style="height: 50vh;">
-                  <div class="txtarea-center">
-                    <h5 class="green-text">Descrição</h5>
-                    <textarea class="p-3 textarea-receita" name="descricao" id="text-desc-receita" cols="45" rows="9"
-                      style="border-radius: 15px;"></textarea>
+                <div class="col-md-5">
+                  <div class="row w-100 h-100 pb-3 m-0">
+                    <textarea class="border border-secondary border-radius-lg w-100 h-100" name="Histórico Entrada" id="escreverHistoricoEntrada" cols="30" rows="10" placeholder="Histórico"></textarea>
                   </div>
                 </div>
               </div>
-              <div class="modal-footer bg-border-black">
-                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
-                <button type="submit" class="btn btn-dark">Registrar</button>
-              </div>
-            </form>
+            </div>
           </div>
-        </div>
+          <div class="modal-footer border-0">
+            <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+            <button type="submit" class="btn btn-dark">Registrar</button>
+          </div>
+        </form>
       </div>
-
-      <!-- Botão Principal -->
-      <button class="button" id="money">
-        <img class="money" src="/assets/dash/img/coins.svg" alt="Money" style="width: 30px;">
-      </button>
     </div>
-    <!-- Final do Botão fixo na página para adição de Receitas e Despesas -->
+  </div>
+
+  <!-- Botão de Entrada -->
+  <button type="button" class="btn btn-primary button" id="receitas" data-bs-toggle="modal"
+    data-bs-target="#exampleModal2" data-bs-whatever="Receita">
+    <img src="/assets/dash/img/receita.svg" alt="Receita" style="width: 35px;">
+  </button>
+
+  <!-- Modal de Entrada -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-receita">
+        <form action="">
+          <div class="modal-header border-0">
+            <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Entrada</h1>
+            <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center">
+            <div class="row w-100 p-0 d-flex justify-content-center">
+              <div class="row w-100 p-2">
+                <div class="col-md-7">
+                  <div class="row w-100 ps-0 m-0">
+                    <div class="col-md-6 p-0 ps-1 pe-1">
+                      <div class="input-group input-group-outline w-100">
+                        <label class="form-label">Título</label>
+                        <input type="text" name="Título Entrada" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 ps-1 pe-1">
+                      <select name="Categoria Entrada" class="p-2 bg-transparent border-radius-md w-100" required>
+                        <option value="" selected>Categoria</option>
+                        <option value="Operacional">Operacional</option>
+                        <option value="Não Operacional">Não Operacional</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row w-100 m-0">
+                    <div class="col-md-6 px-1">
+                      <div class="input-group input-group-outline my-3 w-100">
+                        <label class="form-label">Valor</label>
+                        <input type="text" name="Valor Entrada" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 px-1">
+                      <select name="qtdParcela Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                        <option value="0" selected>Qtd. Parcela</option>
+                        <option value="1">1 Parcela</option>
+                        <option value="2">2 Parcela</option>
+                        <option value="3">3 Parcela</option>
+                        <option value="4">4 Parcela</option>
+                    </select>
+                    </div>
+                  </div>
+                  <div class="px-1">
+                    <select name="Destinatário Entrada" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                      <option value="S/D" selected>Destinatário</option>
+                      <option value="amazonia">Banco da Amazônia S.A.</option>
+                      <option value="brasil">Banco do Brasil S.A.</option>
+                      <option value="brasili">Banco de Brasília S.A.</option>
+                      <option value="nordeste">Banco do Nordeste do Brasil S.A.</option>
+                      <option value="banestes">Banestes S.A.</option>
+                      <option value="banrisul">Banrisul S.A</option>
+                      <option value="bradesco">Banco Bradesco S.A.</option>
+                      <option value="caixa">Caixa Econômica Federal</option>
+                      <option value="citi">Citi S.A</option>
+                      <option value="hsbc">Hsbc S/A</option>
+                      <option value="inter">Inter S.A</option>
+                      <option value="itau">Itau S.A</option>
+                      <option value="nubank">Nu Financeira S.A.</option>
+                      <option value="original">Banco Original S.A.</option>
+                      <option value="safra">Banco Safra S.A.</option>
+                      <option value="santander">Banco Santander S.A</option>
+                      <option value="sicoob">Banco Sicoob S.A.</option>
+                      <option value="sicredi">Banco Sicredi S.A.</option>
+                      <option value="outros">Banco Desconhecido</option>
+                      <option value="S/D">Sem Destinatário</option>
+                  </select>
+                  </div>
+                  <div class="px-1">
+                    <select name="Fornecedor Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                      <option value="S/F" selected>Fornecedor</option>
+                      <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                      <option value="S/F">Sem Fornecedor</option>
+                  </select>
+                  </div>
+                  <div class="row w-100 m-0">
+                    <div class="col-md-6 px-1">
+                      <div class="input-group input-group-outline my-0 w-100 px-0">
+                        <div class="input-group">
+                          <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                            <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                          </ul>
+                          <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="Nota Fiscal Entrada" placeholder="Nota Fiscal" required>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 px-1">
+                    <select name="Status Entrada" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                      <option value="" selected>Status</option>
+                      <option value="Pendente">Pendente</option> 
+                      <option value="Efetuado">Efetuado</option>
+                    </select>
+                  </div>
+                  </div>
+                  <div class="row w-100 m-0">
+                    <div class="col-md-6 px-1">
+                      <select name="Pagamento Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                        <option value="" selected>Pagamento</option>
+                        <option value="Boleto">Boleto</option>
+                        <option value="PIX">PIX</option>
+                        <option value="Crédito">Crédito</option>
+                        <option value="Débito">Débito</option>
+                    </select>
+                    </div>
+                    <div class="col-md-6 px-1">
+                      <div class="input-group input-group-outline my-3 w-100">
+                        <input type="date" class="form-control" name="Data Entrada">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="row w-100 h-100 pb-3 m-0">
+                    <textarea class="border border-secondary border-radius-lg w-100 h-100" name="Histórico Entrada" id="escreverHistoricoEntrada" cols="30" rows="10" placeholder="Histórico"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+            <button type="submit" class="btn btn-dark">Registrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão Principal -->
+  <button class="button" id="money">
+    <img class="money" src="/assets/dash/img/coins.svg" alt="Money" style="width: 30px;">
+  </button>
+</div>
+<!-- Final do Botão fixo na página para adição de Entrada e Saída -->
+
 
     <!-- Navbar Lateral de Configurações -->
     <div class="card shadow-lg">
       <div class="card-header pb-0 pt-3">
-        <div class="float-start">
-          <h5 class="mt-3 mb-0">Material UI Configurator</h5>
-          <p>See our dashboard options.</p>
+        <div class="float-start d-flex justify-content-center mt-3">
+          <img class="w-100 img-fluid" src="/assets/dash/img/logos/logo3.png" alt="Logo Planbase">
         </div>
-        <div class="float-end mt-4">
+        <div class="float-end">
           <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
             <i class="material-icons">clear</i>
           </button>
@@ -938,7 +1023,7 @@
       <div class="card-body pt-sm-3 pt-0">
         <!-- Sidebar Backgrounds -->
         <div>
-          <h6 class="mb-0">Sidebar Colors</h6>
+          <h6 class="mb-0">Temas para Escolha</h6>
         </div>
         <a href="javascript:void(0)" class="switch-trigger background-color">
           <div class="badge-colors my-2 text-start">
@@ -951,32 +1036,31 @@
             <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
           </div>
         </a>
-        <!-- Sidenav Type -->
+        <!-- Temas -->
         <div class="mt-3">
-          <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between 2 different sidenav types.</p>
+          <h6 class="mb-0">Temas</h6>
+          <p class="text-sm">Escolha essas opções para sua comodidade.</p>
         </div>
         <div class="d-flex">
           <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark"
             onclick="sidebarType(this)">Dark</button>
           <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent"
-            onclick="sidebarType(this)">Transparent</button>
+            onclick="sidebarType(this)">Transparente</button>
           <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white"
-            onclick="sidebarType(this)">White</button>
+            onclick="sidebarType(this)">Branco</button>
         </div>
-        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
         <!-- Navbar Fixed -->
         <hr class="horizontal dark my-3">
         <div class="mt-2 d-flex">
-          <h6 class="mb-0">Light / Dark</h6>
+          <h6 class="mb-0">Claro / Escuro</h6>
           <div class="form-check form-switch ps-0 ms-auto my-auto">
             <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
           </div>
         </div>
       </div>
     </div>
-
     <!-- Navbar Lateral de Configurações Final -->
+
     <!--   Core JS Files   -->
     <script src="/assets/dash/js/core/popper.min.js"></script>
     <script src="/assets/dash/js/core/bootstrap.min.js"></script>
@@ -984,8 +1068,8 @@
     <script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="/assets/dash/js/pages/billing/profile-form.js"></script>
     <script src="/assets/dash/js/pages/billing/profile-post.js"></script>
-    <script src="/assets/dash/js/pages/billing/deleteCardBanco.js"></script>
-    <script src="/assets/dash/js/pages/billing/createCardBanco.js"></script>
+    <script src="/assets/dash/js/pages/billing/createAndDeleteCardBanco.js"></script>
+    <script src="/assets/dash/js/pages/billing/createAndDeleteCardFornecedor.js"></script>
     <script src="/assets/dash/js/pages/modal.js"></script>
   
     <script>
@@ -1012,8 +1096,24 @@
     }
       mostrarSenha('senhaDeletar','flexCheckDefault2')
     </script>
+    <script>
+      function mostrarSenha(senhaId, checkId) {
+        const senhaInput = document.getElementById(senhaId);
+        const check = document.getElementById(checkId);
+
+        check.addEventListener('change', function () {
+            if (check.checked) {
+            senhaInput.type = 'text';
+            } else {
+            senhaInput.type = 'password';
+            }
+        });
+    }
+      mostrarSenha('senhaDeletarFornecedor','flexCheckDefault3')
+    </script>
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="/assets/dash/js/material-dashboard.min.js?v=3.1.0"></script>
     

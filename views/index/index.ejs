@@ -33,7 +33,6 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
-
   <!-- Aside -->
   <aside
     class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
@@ -95,7 +94,7 @@
           <!-- /tables/caixa -->
           <a class="nav-link text-white " href="/tables/caixa">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <img src="/assets/dash/img/icons/caixa.svg" alt="Caixa">
+              <img class="material-icons" src="/assets/dash/img/icons/caixa.svg" alt="Caixa">
             </div>
             <span class="nav-link-text ms-1">Caixa</span>
           </a>
@@ -190,92 +189,19 @@
                 </lord-icon>
               </a>
             </li>
-            <li class="nav-item dropdown pe-2 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <lord-icon src="https://cdn.lordicon.com/msetysan.json" trigger="hover" colors="primary:#7b809a"
-                  style="width:20px;height:20px">
-                </lord-icon>
-              </a>
-              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="/assets/dash/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New message</span> from Laur
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          13 minutes ago
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="/assets/dash/img/small-logos/logo-spotify.svg"
-                          class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New album</span> by Travis Scott
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          1 day
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
-                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <title>credit-card</title>
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                              <g transform="translate(1716.000000, 291.000000)">
-                                <g transform="translate(453.000000, 454.000000)">
-                                  <path class="color-background"
-                                    d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
-                                    opacity="0.593633743"></path>
-                                  <path class="color-background"
-                                    d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
-                                  </path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          Payment successfully completed
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          2 days
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
             <li class="nav-item d-flex align-items-center">
-              <a href="/login" class="nav-link text-body font-weight-bold px-0">
-                <span class="d-sm-inline d-none">Login</span>
-              </a>
+              <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-end">
+                  <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+                  <li>
+                    <h6 class="m-0 ms-3 mt-3 text-uppercase text-xs text-white font-weight-bolder opacity-8">Sair</h6>
+                  </li>
+                  <li><a class="dropdown-item" href="/login">Logout</a></li>
+              </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -303,7 +229,7 @@
                 <!-- Titulo -->
                 <p class="text-md font-weight-bold mb-0 text-capitalize">Registros</p>
                 <!-- Valor -->
-                <h4 class="mb-0 number-register">0</h4>
+                <h4 class="mb-0 number-register fs-4">4</h4>
               </div>
             </div>
           </div>
@@ -312,7 +238,8 @@
 
         <!-- Card Entrada -->
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card card-entrance h-100">
+          <div class="card card-entrance h-100 cursor-pointer" data-bs-toggle="modal"
+          data-bs-target="#modalEntradaCard" data-bs-whatever="Entrada">
             <div class="card-header p-3 pt-2">
               <!-- Icon -->
               <div
@@ -323,7 +250,7 @@
                 <!-- Titulo -->
                 <p class="text-md font-weight-bold mb-0 text-capitalize">Entradas</p>
                 <!-- Valor -->
-                <h4 class="mb-0 number-entrance" id="enviarReceita">0.00</h4>
+                <h4 class="mb-0 number-entrance fs-4" id="enviarReceita">27.30</h4>
               </div>
             </div>
           </div>
@@ -332,7 +259,8 @@
 
         <!-- Card Saída -->
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card card-invoice h-100">
+          <div class="card card-invoice h-100 cursor-pointer" data-bs-toggle="modal"
+          data-bs-target="#modalSaidaCard" data-bs-whatever="Saída">
             <div class="card-header p-3 pt-2">
               <!-- Icon -->
               <div
@@ -343,7 +271,7 @@
                 <!-- Titulo -->
                 <p class="text-md font-weight-bold mb-0 text-capitalize">Saídas</p>
                 <!-- Valor -->
-                <h4 class="mb-0 number-invoice" id="invoice-here">0.00</h4>
+                <h4 class="mb-0 number-invoice fs-4" id="invoice-here">27.30</h4>
               </div>
             </div>
           </div>
@@ -363,7 +291,7 @@
                 <!-- Titulo -->
                 <p class="text-md font-weight-bold mb-0 text-capitalize">Caixa</p>
                 <!-- Valor -->
-                <h4 class="mb-0 number-total">0.00</h4>
+                <h4 class="mb-0 number-total fs-4">0.00</h4>
               </div>
             </div>
           </div>
@@ -406,7 +334,7 @@
             <div class="card-header pb-0">
               <div class="row">
                 <div class="col-lg-6 col-7">
-                  <h6>Registros</h6>
+                  <h5>Registros</h5>
                   <p class="text-sm mb-0">
                     <i class="fa fa-check text-info" aria-hidden="true"></i>
                     <span class="font-weight-bold ms-1">6 últimos</span> registros feitos.
@@ -426,317 +354,341 @@
                 </div>
               </div>
             </div>
-            <div class="card-body px-0 pb-2">
-              <div class="table-responsive">
-                <table class="table align-items-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-dark font-weight-bolder opacity-10 text-sm">Titulo
-                      </th>
-                      <th class="text-uppercase text-center text-dark text-sm font-weight-bolder opacity-10 ps-2">Data
-                      </th>
-                      <th
-                        class="text-uppercase text-center text-secondary text-dark text-sm font-weight-bolder opacity-10 ps-2">
-                        Valor</th>
-                      <th
-                        class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
-                        Descrição
-                      </th>
-                      <th
-                        class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
-                        Status
-                      </th>
-                  </thead>
-                  <tbody>
-                    <!-- Card das receitas de modelo -->
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
-                              alt="user1">
+            <!-- Tables -->
+            <a class="m-0 nav-link" href="/tables">
+              <div class="card-body px-0 pb-2">
+                <div class="table-responsive">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-dark font-weight-bolder opacity-10 text-sm">Titulo
+                        </th>
+                        <th class="text-uppercase text-center text-dark text-sm font-weight-bolder opacity-10 ps-2">Data
+                        </th>
+                        <th
+                          class="text-uppercase text-center text-secondary text-dark text-sm font-weight-bolder opacity-10 ps-2">
+                          Valor</th>
+                        <th
+                          class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                          Histórico
+                        </th>
+                        <th
+                          class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                          Status
+                        </th>
+                    </thead>
+                    <tbody>
+                      <!-- Card das receitas de modelo -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                                alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lucro de 30%</h6>
+                              <p class="text-xs text-secondary mb-0">Operacional</p>
+                            </div>
                           </div>
-                          <!-- Titulo -->
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Lucro de 30%</h6>
-                            <p class="text-xs text-secondary mb-0">Operacional</p>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Lucro obtido encima das ações...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Efetuado
+                          </span>
+                        </td>
+                      <!-- Card das despesas de modelo -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                                alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Pagamento</h6>
+                              <p class="text-xs text-secondary mb-0">Não Operacional</p>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <!-- Data -->
-                      <td class="text-center">
-                        <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
-                      </td>
-                      <!-- Valor -->
-                      <td class="align-middle text-sm text-center">
-                        <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
-                      </td>
-                      <!-- Descrição -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Lucro obtido encima das ações...
-                        </span>
-                      </td>
-                      <!-- Status -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Efetuado
-                        </span>
-                      </td>
-                    <!-- Card das despesas de modelo -->
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg"
-                              alt="user1">
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">10/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$350,00</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pagamento da funcionária...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pendente
+                          </span>
+                        </td>
+                      <!-- Registro 1 -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Pagamento</h6>
+                              <p class="text-xs text-secondary mb-0">Não Operacional</p>
+                            </div>
                           </div>
-                          <!-- Titulo -->
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Pagamento</h6>
-                            <p class="text-xs text-secondary mb-0">Não Operacional</p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Data -->
-                      <td class="text-center">
-                        <span class="text-secondary text-xs font-weight-bold">10/10/2023</span>
-                      </td>
-                      <!-- Valor -->
-                      <td class="align-middle text-sm text-center">
-                        <span class="text-secondary text-center text-xs font-weight-bold">R$350,00</span>
-                      </td>
-                      <!-- Descrição -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Pagamento da funcionária...
-                        </span>
-                      </td>
-                      <!-- Status -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Pendente
-                        </span>
-                      </td>
-                    <!-- Registro 1 -->
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
-                          </div>
-                          <!-- Titulo -->
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Pagamento</h6>
-                            <p class="text-xs text-secondary mb-0">Não Operacional</p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Data -->
-                      <td class="text-center">
-                        <span class="text-secondary text-xs font-weight-bold">10/10/2023</span>
-                      </td>
-                      <!-- Valor -->
-                      <td class="align-middle text-sm text-center">
-                        <span class="text-secondary text-center text-xs font-weight-bold">R$350,00</span>
-                      </td>
-                      <!-- Descrição -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Pagamento da funcionária...
-                        </span>
-                      </td>
-                      <!-- Status -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Pendente
-                        </span>
-                      </td>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">10/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$350,00</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pagamento da funcionária...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pendente
+                          </span>
+                        </td>
 
-                    <!-- Registro 2 -->
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                      <!-- Registro 2 -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Pagamento</h6>
+                              <p class="text-xs text-secondary mb-0">Não Operacional</p>
+                            </div>
                           </div>
-                          <!-- Titulo -->
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Pagamento</h6>
-                            <p class="text-xs text-secondary mb-0">Não Operacional</p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Data -->
-                      <td class="text-center">
-                        <span class="text-secondary text-xs font-weight-bold">11/10/2023</span>
-                      </td>
-                      <!-- Valor -->
-                      <td class="align-middle text-sm text-center">
-                        <span class="text-secondary text-center text-xs font-weight-bold">R$450,00</span>
-                      </td>
-                      <!-- Descrição -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Pagamento de fornecedor...
-                        </span>
-                      </td>
-                      <!-- Status -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Pendente
-                        </span>
-                      </td>
-                    </tr>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">11/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$450,00</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pagamento de fornecedor...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pendente
+                          </span>
+                        </td>
+                      </tr>
 
-                     <!-- Card das receitas de modelo -->
-                     <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
-                              alt="user1">
+                      <!-- Card das receitas de modelo -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                                alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lucro de 30%</h6>
+                              <p class="text-xs text-secondary mb-0">Operacional</p>
+                            </div>
                           </div>
-                          <!-- Titulo -->
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Lucro de 30%</h6>
-                            <p class="text-xs text-secondary mb-0">Operacional</p>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Lucro obtido encima das ações...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Efetuado
+                          </span>
+                        </td>
+                      </tr>
+                      <!-- Card das receitas de modelo -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                                alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lucro de 30%</h6>
+                              <p class="text-xs text-secondary mb-0">Operacional</p>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <!-- Data -->
-                      <td class="text-center">
-                        <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
-                      </td>
-                      <!-- Valor -->
-                      <td class="align-middle text-sm text-center">
-                        <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
-                      </td>
-                      <!-- Descrição -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Lucro obtido encima das ações...
-                        </span>
-                      </td>
-                      <!-- Status -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Efetuado
-                        </span>
-                      </td>
-                    </tr>
-                    <!-- Card das receitas de modelo -->
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
-                              alt="user1">
-                          </div>
-                          <!-- Titulo -->
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Lucro de 30%</h6>
-                            <p class="text-xs text-secondary mb-0">Operacional</p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Data -->
-                      <td class="text-center">
-                        <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
-                      </td>
-                      <!-- Valor -->
-                      <td class="align-middle text-sm text-center">
-                        <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
-                      </td>
-                      <!-- Descrição -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Lucro obtido encima das ações...
-                        </span>
-                      </td>
-                      <!-- Status -->
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">
-                          Efetuado
-                        </span>
-                      </td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Lucro obtido encima das ações...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Efetuado
+                          </span>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
+            </a>
+            <!-- End Tables -->
           </div>
         </div>
+
+        <!-- Notas Fiscais -->
         <div class="col-lg-4 col-md-6">
-          <div class="card h-100">
-            <div class="card-header pb-0">
-              <h6>Orders overview</h6>
-              <p class="text-sm">
-                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
-                <span class="font-weight-bold">24%</span> this month
-              </p>
-            </div>
-            <div class="card-body p-3">
-              <div class="timeline timeline-one-side">
-                <div class="timeline-block mb-3">
-                  <span class="timeline-step">
-                    <i class="material-icons text-success text-gradient">notifications</i>
-                  </span>
-                  <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM</p>
+          <a class="m-0 nav-link" href="/billing">
+            <div class="card h-100">
+              <div class="card-header pb-0">
+                <h5>Notas Fiscais</h5>
+                <p class="text-sm">
+                  <img src="/assets/dash/img/icons/notas-fiscais.svg" alt="Notas Fiscais" width="20px">
+                  <span class="font-weight-bold">6 últimas</span> notas registradas.
+                </p>
+              </div>
+              <div class="card-body p-3 mt-2">
+                <!-- Conteúdo nota fiscal -->
+                <div>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
                   </div>
-                </div>
-                <div class="timeline-block mb-3">
-                  <span class="timeline-step">
-                    <i class="material-icons text-danger text-gradient">code</i>
-                  </span>
-                  <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 11 PM</p>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
                   </div>
-                </div>
-                <div class="timeline-block mb-3">
-                  <span class="timeline-step">
-                    <i class="material-icons text-info text-gradient">shopping_cart</i>
-                  </span>
-                  <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">Server payments for April</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 9:34 PM</p>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
                   </div>
-                </div>
-                <div class="timeline-block mb-3">
-                  <span class="timeline-step">
-                    <i class="material-icons text-warning text-gradient">credit_card</i>
-                  </span>
-                  <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">New card added for order #4395133</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 DEC 2:20 AM</p>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
                   </div>
-                </div>
-                <div class="timeline-block mb-3">
-                  <span class="timeline-step">
-                    <i class="material-icons text-primary text-gradient">key</i>
-                  </span>
-                  <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">Unlock packages for development</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">18 DEC 4:54 AM</p>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
                   </div>
-                </div>
-                <div class="timeline-block">
-                  <span class="timeline-step">
-                    <i class="material-icons text-dark text-gradient">payments</i>
-                  </span>
-                  <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">New order #9583120</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">17 DEC</p>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
                   </div>
+                  <!-- Fim conteúdo nota fiscal -->
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
+      
+        <!-- Notas Fiscais End -->
       </div>
       <!-- Tabela de Registros End-->
     </div>
@@ -759,62 +711,127 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content bg-despesa">
             <form action="">
-              <div class="modal-header bg-border-black">
-                <h1 class="modal-title fs-5 red-text" id="exampleModalLabel">Registrar Despesa</h1>
+              <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Saída</h1>
                 <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body d-flex flex-column align-items-center">
-                <div class="group-top w-75 d-flex justify-content-center">
-                  <div class="grupo-1 d-flex justify-content-center">
-                    <img src="/assets/dash/img/Despesa.jpg" alt="Despesa" class="img-fluid w-100"
-                      style="border-radius: 50%;">
-                  </div>
-                  <div class="group2 d-flex align-items-center">
-                    <div class="group1-1 d-flex flex-column">
-                      <div class="input-despesa">
-                        <input class="inpt-despesa-el" required="" type="text" name="titulo" autocomplete="off"
-                          class="input">
-                        <label class="user-label-receita">Título da Despesa</label>
+                <div class="row w-100 p-0 d-flex justify-content-center">
+                  <div class="row w-100 p-2">
+                    <div class="col-md-7">
+                      <div class="row w-100 ps-0 m-0">
+                        <div class="col-md-6 p-0 ps-1 pe-1">
+                          <div class="input-group input-group-outline w-100">
+                            <label class="form-label">Título</label>
+                            <input type="text" name="Título Entrada" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-1 pe-1">
+                          <select name="Categoria Entrada" class="p-2 bg-transparent border-radius-md w-100" required>
+                            <option value="" selected>Categoria</option>
+                            <option value="Operacional">Operacional</option>
+                            <option value="Não Operacional">Não Operacional</option>
+                          </select>
+                        </div>
                       </div>
-
-                      <div class="input-despesa">
-                        <select class="inpt-despesa-el-select text-md" aria-label="Default select example"
-                          name="categoria">
-                          <option value="">Categoria...</option>
-                          <option value="Operacional">Operacional</option>
-                          <option value="Não Operacional">Não Operacional</option>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <label class="form-label">Valor</label>
+                            <input type="text" name="Valor Entrada" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="qtdParcela Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="0" selected>Qtd. Parcela</option>
+                            <option value="1">1 Parcela</option>
+                            <option value="2">2 Parcela</option>
+                            <option value="3">3 Parcela</option>
+                            <option value="4">4 Parcela</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="px-1">
+                        <select name="Destinatário Entrada" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                          <option value="S/D" selected>Remetente</option>
+                          <option value="amazonia">Banco da Amazônia S.A.</option>
+                          <option value="brasil">Banco do Brasil S.A.</option>
+                          <option value="brasili">Banco de Brasília S.A.</option>
+                          <option value="nordeste">Banco do Nordeste do Brasil S.A.</option>
+                          <option value="banestes">Banestes S.A.</option>
+                          <option value="banrisul">Banrisul S.A</option>
+                          <option value="bradesco">Banco Bradesco S.A.</option>
+                          <option value="caixa">Caixa Econômica Federal</option>
+                          <option value="citi">Citi S.A</option>
+                          <option value="hsbc">Hsbc S/A</option>
+                          <option value="inter">Inter S.A</option>
+                          <option value="itau">Itau S.A</option>
+                          <option value="nubank">Nu Financeira S.A.</option>
+                          <option value="original">Banco Original S.A.</option>
+                          <option value="safra">Banco Safra S.A.</option>
+                          <option value="santander">Banco Santander S.A</option>
+                          <option value="sicoob">Banco Sicoob S.A.</option>
+                          <option value="sicredi">Banco Sicredi S.A.</option>
+                          <option value="outros">Banco Desconhecido</option>
+                          <option value="S/D">Sem Destinatário</option>
+                      </select>
+                      </div>
+                      <div class="px-1">
+                        <select name="Fornecedor Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="S/F" selected>Fornecedor</option>
+                          <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                          <option value="S/F">Sem Fornecedor</option>
+                      </select>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-0 w-100 px-0">
+                            <div class="input-group">
+                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                                <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                              </ul>
+                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="Nota Fiscal Entrada" placeholder="Nota Fiscal" required>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 px-1">
+                        <select name="Status Entrada" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                          <option value="" selected>Status</option>
+                          <option value="Pendente">Pendente</option> 
+                          <option value="Efetuado">Efetuado</option>
                         </select>
                       </div>
-                    </div>
-
-                    <div class="group1-2 d-flex flex-column">
-                      <div class="input-despesa">
-                        <input class="inpt-despesa-el inpt-despesa-el-data" required="" id="dataInput" type="text"
-                          name="data" autocomplete="off" class="input">
-                        <label class="user-label-receita">Data</label>
                       </div>
-
-                      <div class="input-despesa">
-                        <input class="inpt-despesa-el-number" required="" type="text" id="valueInputRegistros"
-                          name="valor" autocomplete="off" class="input">
-                        <label class="user-label-receita" id="valueLabelRegistros">Valor</label>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <select name="Pagamento Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="" selected>Pagamento</option>
+                            <option value="Boleto">Boleto</option>
+                            <option value="PIX">PIX</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                        </select>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <input type="date" class="form-control" name="Data Entrada">
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div class="group-bottom d-flex mt-4 justify-content-center flex-column align-items-center"
-                  style="height: 50vh;">
-                  <div class="txtarea-center">
-                    <h5 class="red-text">Descrição</h5>
-                    <textarea class="p-3 textarea-despesa" name="descricao" id="text-desc-despesa" cols="45" rows="9"
-                      style="border-radius: 15px;"></textarea>
+                    <div class="col-md-5">
+                      <div class="row w-100 h-100 pb-3 m-0">
+                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="Histórico Entrada" id="escreverHistoricoEntrada" cols="30" rows="10" placeholder="Histórico"></textarea>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="modal-footer bg-border-black">
+              <div class="modal-footer border-0">
                 <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
-                <button type="submit" class="btn btn-dark" id="enviarDespesa">Registrar</button>
+                <button type="submit" class="btn btn-dark">Registrar</button>
               </div>
             </form>
           </div>
@@ -832,60 +849,125 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content bg-receita">
             <form action="">
-              <div class="modal-header bg-border-black">
-                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Registrar Receita</h1>
+              <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Entrada</h1>
                 <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body d-flex flex-column align-items-center">
-                <div class="group-top w-75 d-flex justify-content-center">
-                  <div class="grupo-1 d-flex justify-content-center">
-                    <img src="/assets/dash/img/Receita.jpg" alt="Receita" class="img-fluid w-100"
-                      style="border-radius: 50%;">
-                  </div>
-                  <div class="group2 d-flex align-items-center">
-                    <div class="group1-1 d-flex flex-column">
-                      <div class="input-receita">
-                        <input class="inpt-receita-el" required="" type="text" name="titulo" autocomplete="off"
-                          class="input">
-                        <label class="user-label-receita">Título da Receita</label>
+                <div class="row w-100 p-0 d-flex justify-content-center">
+                  <div class="row w-100 p-2">
+                    <div class="col-md-7">
+                      <div class="row w-100 ps-0 m-0">
+                        <div class="col-md-6 p-0 ps-1 pe-1">
+                          <div class="input-group input-group-outline w-100">
+                            <label class="form-label">Título</label>
+                            <input type="text" name="Título Entrada" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-1 pe-1">
+                          <select name="Categoria Entrada" class="p-2 bg-transparent border-radius-md w-100" required>
+                            <option value="" selected>Categoria</option>
+                            <option value="Operacional">Operacional</option>
+                            <option value="Não Operacional">Não Operacional</option>
+                          </select>
+                        </div>
                       </div>
-
-                      <div class="input-receita">
-                        <select class="inpt-receita-el-select text-md" aria-label="Default select example"
-                          name="categoria">
-                          <option value="">Categoria...</option>
-                          <option value="Operacional">Operacional</option>
-                          <option value="Não Operacional">Não Operacional</option>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <label class="form-label">Valor</label>
+                            <input type="text" name="Valor Entrada" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="qtdParcela Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="0" selected>Qtd. Parcela</option>
+                            <option value="1">1 Parcela</option>
+                            <option value="2">2 Parcela</option>
+                            <option value="3">3 Parcela</option>
+                            <option value="4">4 Parcela</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="px-1">
+                        <select name="Destinatário Entrada" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                          <option value="S/D" selected>Destinatário</option>
+                          <option value="amazonia">Banco da Amazônia S.A.</option>
+                          <option value="brasil">Banco do Brasil S.A.</option>
+                          <option value="brasili">Banco de Brasília S.A.</option>
+                          <option value="nordeste">Banco do Nordeste do Brasil S.A.</option>
+                          <option value="banestes">Banestes S.A.</option>
+                          <option value="banrisul">Banrisul S.A</option>
+                          <option value="bradesco">Banco Bradesco S.A.</option>
+                          <option value="caixa">Caixa Econômica Federal</option>
+                          <option value="citi">Citi S.A</option>
+                          <option value="hsbc">Hsbc S/A</option>
+                          <option value="inter">Inter S.A</option>
+                          <option value="itau">Itau S.A</option>
+                          <option value="nubank">Nu Financeira S.A.</option>
+                          <option value="original">Banco Original S.A.</option>
+                          <option value="safra">Banco Safra S.A.</option>
+                          <option value="santander">Banco Santander S.A</option>
+                          <option value="sicoob">Banco Sicoob S.A.</option>
+                          <option value="sicredi">Banco Sicredi S.A.</option>
+                          <option value="outros">Banco Desconhecido</option>
+                          <option value="S/D">Sem Destinatário</option>
+                      </select>
+                      </div>
+                      <div class="px-1">
+                        <select name="Fornecedor Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="S/F" selected>Fornecedor</option>
+                          <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                          <option value="S/F">Sem Fornecedor</option>
+                      </select>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-0 w-100 px-0">
+                            <div class="input-group">
+                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                                <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                              </ul>
+                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="Nota Fiscal Entrada" placeholder="Nota Fiscal" required>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 px-1">
+                        <select name="Status Entrada" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                          <option value="" selected>Status</option>
+                          <option value="Pendente">Pendente</option> 
+                          <option value="Efetuado">Efetuado</option>
                         </select>
                       </div>
-                    </div>
-
-                    <div class="group1-2 d-flex flex-column">
-                      <div class="input-receita">
-                        <input class="inpt-receita-el inpt-receita-el-data" required="" id="dataInput2" type="text"
-                          name="data" autocomplete="off" class="input">
-                        <label class="user-label-receita">Data</label>
                       </div>
-
-                      <div class="input-receita">
-                        <input class="inpt-receita-el-number" required="" type="text" id="valueInputRegistros2"
-                          name="valor" autocomplete="off" class="input">
-                        <label class="user-label-receita" id="valueLabelRegistros2">Valor</label>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <select name="Pagamento Entrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="" selected>Pagamento</option>
+                            <option value="Boleto">Boleto</option>
+                            <option value="PIX">PIX</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                        </select>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <input type="date" class="form-control" name="Data Entrada">
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div class="group-bottom d-flex mt-4 justify-content-center flex-column align-items-center"
-                  style="height: 50vh;">
-                  <div class="txtarea-center">
-                    <h5 class="green-text">Descrição</h5>
-                    <textarea class="p-3 textarea-receita" name="descricao" id="text-desc-receita" cols="45" rows="9"
-                      style="border-radius: 15px;"></textarea>
+                    <div class="col-md-5">
+                      <div class="row w-100 h-100 pb-3 m-0">
+                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="Histórico Entrada" id="escreverHistoricoEntrada" cols="30" rows="10" placeholder="Histórico"></textarea>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="modal-footer bg-border-black">
+              <div class="modal-footer border-0">
                 <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
                 <button type="submit" class="btn btn-dark">Registrar</button>
               </div>
@@ -901,14 +983,135 @@
     </div>
     <!-- Final do Botão fixo na página para adição de Entrada e Saída -->
 
+
+    <!-- Modal Card de Entrada -->
+    <div class="modal fade" id="modalEntradaCard" tabindex="-1" aria-labelledby="modalEntradaCard2" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content" style="background-image: linear-gradient(126deg, #49f54ff5, #000000f0 94%);">
+          <div class="modal-header bg-border-black">
+            <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Receitas Registradas</h1>
+            <button type="button" class="btn-close btn-danger shadow-success" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center overflow-y-auto" style="max-height: 20em;">
+            <!-- Conteúdo das listas de entrada -->
+            <div class="d-flex align-items-center gap-4 border border-seccondary p-2 w-100 justify-content-between border-radius-md">
+              <!-- Titulo -->
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Reembolso de Fornecedor</h6>
+                <p class="text-xs text-dark mb-0">Operacional</p>
+              </div>
+              <!-- Data -->
+              <div class="align-middle text-center">
+                <span class="text-success text-xs font-weight-bold">16/10/2023</span>
+              </div>
+              <!-- Valor -->
+              <div class="align-middle text-center">
+                <span class="text-success text-center text-xs font-weight-bold">R$<span class="value-table-receita">13,65</span></span>
+              </div>
+            </div>
+
+            <!-- Conteúdo das listas de entrada -->
+            <div class="d-flex align-items-center gap-4 border border-seccondary p-2 w-100 justify-content-between border-radius-md">
+              <!-- Titulo -->
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-sm text-dark">Reembolso de Fornecedor</h6>
+                <p class="text-xs text-dark mb-0">Operacional</p>
+              </div>
+              <!-- Data -->
+              <div class="align-middle text-center">
+                <span class="text-success text-xs font-weight-bold">16/10/2023</span>
+              </div>
+              <!-- Valor -->
+              <div class="align-middle text-center">
+                <span class="text-success text-center text-xs font-weight-bold">R$<span class="value-table-receita">13,65</span></span>
+              </div>
+            </div>
+
+            <!-- Fim Conteúdo das listas de entrada -->
+          </div>
+          <div class="modal-footer bg-border-black">
+            <!-- Calculo da soma dos valores de entrada -->
+              <div class="bg-gradient-success shadow-success border-radius-lg d-flex justify-content-between pt-3 pb-2 w-100">
+                <h6 class="text-white text-capitalize ps-3">Entradas</h6>
+                <h6 class="m-0 me-4 text-white">R$<span class="font-weight-bold"> 27.30</span></h6>
+              </div>
+            <!-- Fim Calculo da soma dos valores de entrada -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal Card de Saida -->
+    <div class="modal fade" id="modalSaidaCard" tabindex="-1" aria-labelledby="modalSaidaCard2" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content" style="background-image: linear-gradient(126deg, #ff665cf5, #000000f0 94%);">
+          <div class="modal-header bg-border-black">
+            <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Saídas Registradas</h1>
+            <button type="button" class="btn-close btn-danger shadow-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center overflow-y-auto" style="max-height: 20em;">
+            <!-- Conteúdo das listas de saída -->
+            <div class="d-flex align-items-center gap-4 border border-seccondary p-2 w-100 justify-content-between border-radius-md">
+              <!-- Titulo -->
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Produtos de Limpeza</h6>
+                <p class="text-xs text-dark mb-0">Não Operacional</p>
+              </div>
+              <!-- Data -->
+              <div class="align-middle text-center">
+                <span class="text-danger text-xs font-weight-bold">18/10/2023</span>
+              </div>
+              <!-- Valor -->
+              <div class="align-middle text-center">
+                <span class="text-danger text-center text-xs font-weight-bold">R$<span class="value-table-receita">13,65</span></span>
+              </div>
+            </div>
+
+            <!-- Conteúdo das listas de saída -->
+            <div class="d-flex align-items-center gap-4 border border-seccondary p-2 w-100 justify-content-between border-radius-md">
+              <!-- Titulo -->
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Produtos de Limpeza</h6>
+                <p class="text-xs text-dark mb-0">Não Operacional</p>
+              </div>
+              <!-- Data -->
+              <div class="align-middle text-center">
+                <span class="text-danger text-xs font-weight-bold">18/10/2023</span>
+              </div>
+              <!-- Valor -->
+              <div class="align-middle text-center">
+                <span class="text-danger text-center text-xs font-weight-bold">R$<span class="value-table-receita">13,65</span></span>
+              </div>
+            </div>
+
+
+            <!-- Fim Conteúdo das listas de saída -->
+          </div>
+          <div class="modal-footer bg-border-black">
+            <!-- Calculo da soma dos valores de saída -->
+              <div class="bg-gradient-danger shadow-danger border-radius-lg d-flex justify-content-between pt-3 pb-2 w-100">
+                <h6 class="text-white text-capitalize ps-3">Saídas</h6>
+                <h6 class="m-0 me-4 text-white">R$<span class="font-weight-bold"> 27.30</span></h6>
+              </div>
+            <!-- Fim Calculo da soma dos valores de saída -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
     <!-- Navbar Lateral de Configurações -->
     <div class="card shadow-lg">
       <div class="card-header pb-0 pt-3">
-        <div class="float-start">
-          <h5 class="mt-3 mb-0">Material UI Configurator</h5>
-          <p>See our dashboard options.</p>
+        <div class="float-start d-flex justify-content-center mt-3">
+          <img class="w-100 img-fluid" src="/assets/dash/img/logos/logo3.png" alt="Logo Planbase">
         </div>
-        <div class="float-end mt-4">
+        <div class="float-end">
           <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
             <i class="material-icons">clear</i>
           </button>
@@ -919,7 +1122,7 @@
       <div class="card-body pt-sm-3 pt-0">
         <!-- Sidebar Backgrounds -->
         <div>
-          <h6 class="mb-0">Sidebar Colors</h6>
+          <h6 class="mb-0">Temas para Escolha</h6>
         </div>
         <a href="javascript:void(0)" class="switch-trigger background-color">
           <div class="badge-colors my-2 text-start">
@@ -932,24 +1135,23 @@
             <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
           </div>
         </a>
-        <!-- Sidenav Type -->
+        <!-- Temas -->
         <div class="mt-3">
-          <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between 2 different sidenav types.</p>
+          <h6 class="mb-0">Temas</h6>
+          <p class="text-sm">Escolha essas opções para sua comodidade.</p>
         </div>
         <div class="d-flex">
           <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark"
             onclick="sidebarType(this)">Dark</button>
           <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent"
-            onclick="sidebarType(this)">Transparent</button>
+            onclick="sidebarType(this)">Transparente</button>
           <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white"
-            onclick="sidebarType(this)">White</button>
+            onclick="sidebarType(this)">Branco</button>
         </div>
-        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
         <!-- Navbar Fixed -->
         <hr class="horizontal dark my-3">
         <div class="mt-2 d-flex">
-          <h6 class="mb-0">Light / Dark</h6>
+          <h6 class="mb-0">Claro / Escuro</h6>
           <div class="form-check form-switch ps-0 ms-auto my-auto">
             <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
           </div>

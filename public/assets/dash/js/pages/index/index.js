@@ -1,4 +1,4 @@
-const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
       const data = {
         labels: labels,
         datasets: [
@@ -16,19 +16,41 @@ const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
             borderColor: '#ee3939',
             tension: 0.1,
           },
-          // {
-          //   label: 'Caixa',
-          //   data: [60, 30, -10, 14, 16, 20, 78, 61, 31, 10, 26, 49],
-          //   fill: false,
-          //   borderColor: '#66b7e7',
-          //   tension: 0.1,
-          // },
         ],
       };
       
       const config = {
         type: 'line',
         data: data,
+        options: {
+          scales: {
+            x: {
+              grid: {
+                color: '#000' // Configura a cor das linhas de grade do eixo x como cinza
+              },
+              beginAtZero: true,
+              ticks: {
+                color: 'white' // Configura a cor dos números do eixo x para branco
+              }
+            },
+            y: {
+              grid: {
+                color: '#000' // Configura a cor das linhas de grade do eixo y como cinza
+              },
+              beginAtZero: true,
+              ticks: {
+                color: 'white' // Configura a cor dos números do eixo y para branco
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: 'white' // Configura a cor do texto da legenda para branco
+              }
+            }
+          }
+        }
       };
     
       var myChart = new Chart(document.getElementById('myChart'), config);

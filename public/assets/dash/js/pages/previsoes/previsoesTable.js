@@ -29,6 +29,35 @@ const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
       const config = {
         type: 'line',
         data: data,
+        options: {
+          scales: {
+            x: {
+              grid: {
+                color: '#000' // Configura a cor das linhas de grade do eixo x como cinza
+              },
+              beginAtZero: true,
+              ticks: {
+                color: 'white' // Configura a cor dos números do eixo x para branco
+              }
+            },
+            y: {
+              grid: {
+                color: '#000' // Configura a cor das linhas de grade do eixo y como cinza
+              },
+              beginAtZero: true,
+              ticks: {
+                color: 'white' // Configura a cor dos números do eixo y para branco
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: 'white' // Configura a cor do texto da legenda para branco
+              }
+            }
+          }
+        }
       };
     
       var myChart = new Chart(document.getElementById('myChart'), config);

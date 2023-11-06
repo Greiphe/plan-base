@@ -10,5 +10,4 @@ function calcularEInserirValores(classeElementos, elementoInserir) {
 
     elementoInserirValor.innerText = valorParaInserir.toFixed(2);
 }
-
 calcularEInserirValores('.value-table-receita', 'value-insert-receita-here');
